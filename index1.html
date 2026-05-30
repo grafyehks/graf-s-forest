@@ -312,20 +312,20 @@ textarea.suggest-box::placeholder{color:#c0a0d0}
     <h2 class="t-title fade-in" style="color:#6a4a3a;animation-delay:0.2s">Find me here</h2>
     <p class="t-sub fade-up" style="color:#9a7a6a;animation-delay:0.4s">the forest has many paths — you can always find Graf</p>
     <div class="con-cards fade-up" style="animation-delay:0.6s">
-      <div class="con-card" onclick="copyTxt('YOUR_EMAIL','Email copied! 📮')">
+      <div class="con-card" onclick="copyTxt('grafyingmay@gmail.com','Email copied! 📮')">
         <div class="c-icon">📮</div>
         <span class="c-label">Email</span>
-        <span class="c-val">YOUR_EMAIL</span>
+        <span class="c-val">grafyingmay@gmail.com</span>
       </div>
-      <div class="con-card" onclick="copyTxt('YOUR_WHATSAPP','WhatsApp copied! 💬')">
+      <div class="con-card" onclick="copyTxt('+886 934042621','WhatsApp copied! 💬')">
         <div class="c-icon">💬</div>
         <span class="c-label">WhatsApp</span>
-        <span class="c-val">YOUR_WHATSAPP</span>
+        <span class="c-val">+886 934042621</span>
       </div>
-      <div class="con-card" onclick="copyTxt('YOUR_LINKEDIN','LinkedIn copied! 🔗')">
+      <div class="con-card" onclick="copyTxt('https://www.linkedin.com/in/peiyingyeh/','LinkedIn copied! 🔗')">
         <div class="c-icon">🔗</div>
         <span class="c-label">LinkedIn</span>
-        <span class="c-val">YOUR_LINKEDIN</span>
+        <span class="c-val">https://www.linkedin.com/in/peiyingyeh/</span>
       </div>
     </div>
     <button class="btn btn-warm fade-up" onclick="goTo(8)" style="animation-delay:0.8s">see what's next →</button>
@@ -408,7 +408,7 @@ textarea.suggest-box::placeholder{color:#c0a0d0}
 
 <script>
 // ── CONFIGURATION ── Replace these before uploading ──────────────────────
-const APPS_URL = 'YOUR_APPS_SCRIPT_URL';
+const APPS_URL = 'https://script.google.com/macros/s/AKfycbz1aI97io0vHBMMv_RoRV96tUDYRd7UPHzPSrtbDzsGRg3Z0bfYm-yiV_i5V_CwtlX2/exec';
 // ─────────────────────────────────────────────────────────────────────────
 
 const COLLEAGUES = [
@@ -517,7 +517,7 @@ function sendMsg() {
 
 // ── Screen 4 ──────────────────────────────────────────────────────────
 async function loadGroceryCounts() {
-  if (!APPS_URL || APPS_URL === 'YOUR_APPS_SCRIPT_URL') return;
+  if (!APPS_URL || APPS_URL === 'https://script.google.com/macros/s/AKfycbz1aI97io0vHBMMv_RoRV96tUDYRd7UPHzPSrtbDzsGRg3Z0bfYm-yiV_i5V_CwtlX2/exec') return;
   try {
     const r = await fetch(APPS_URL, {
       method: 'POST',
@@ -555,7 +555,7 @@ function toggleGrocery(id, el) {
 function sendGrocery() {
   const picked = Object.keys(selectedGrocery);
   pendingGift = picked.join(', ');
-  if (picked.length > 0 && APPS_URL !== 'YOUR_APPS_SCRIPT_URL') {
+  if (picked.length > 0 && APPS_URL !== 'https://script.google.com/macros/s/AKfycbz1aI97io0vHBMMv_RoRV96tUDYRd7UPHzPSrtbDzsGRg3Z0bfYm-yiV_i5V_CwtlX2/exec') {
     picked.forEach(id => {
       fetch(APPS_URL, {method:'POST', body:JSON.stringify({type:'grocery', item:id})}).catch(()=>{});
     });
@@ -573,7 +573,7 @@ function sendSuggestion() {
 }
 
 function flushToSheet(suggestion) {
-  if (APPS_URL === 'YOUR_APPS_SCRIPT_URL') return;
+  if (APPS_URL === 'https://script.google.com/macros/s/AKfycbz1aI97io0vHBMMv_RoRV96tUDYRd7UPHzPSrtbDzsGRg3Z0bfYm-yiV_i5V_CwtlX2/exec') return;
   const payload = {
     type: 'message',
     name: curPerson?.name || 'friend',
