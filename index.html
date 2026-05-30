@@ -15,7 +15,7 @@ body{font-family:'Lora',serif;background:#f5efe6}
 .content{position:relative;z-index:2;width:100%;max-width:600px;display:flex;flex-direction:column;align-items:center}
 
 .t-title{font-family:'Gaegu',cursive;font-size:2rem;text-align:center;line-height:1.3}
-.t-sub{font-family:'Lora',serif;font-style:italic;font-size:0.92rem;text-align:center;margin-top:0.5rem;opacity:0.82;max-width:420px;line-height:1.7}
+.t-sub{font-family:'Lora',serif;font-style:italic;font-size:0.92rem;text-align:center;margin-top:0.5rem;opacity:0.82;max-width:440px;line-height:1.7}
 .t-hand{font-family:'Nanum Pen Script',cursive;font-size:1.4rem;text-align:center}
 
 .btn{font-family:'Gaegu',cursive;font-size:1rem;padding:0.6rem 1.8rem;border-radius:30px;border:2px solid;cursor:pointer;transition:all 0.25s;margin:0.3rem;letter-spacing:0.02em;min-height:44px}
@@ -24,8 +24,10 @@ body{font-family:'Lora',serif;background:#f5efe6}
 .btn-warm{background:#d4806a;color:#fff;border-color:#d4806a}.btn-warm:hover{background:#b06050;transform:scale(1.04)}
 .btn-purple{background:#8a60c0;color:#fff;border-color:#8a60c0}.btn-purple:hover{background:#6a40a0;transform:scale(1.04)}
 .btn-sky{background:#5a90c8;color:#fff;border-color:#5a90c8}.btn-sky:hover{background:#3a70a8;transform:scale(1.04)}
-.btn-pink{background:#d4708a;color:#fff;border-color:#d4708a}.btn-pink:hover{background:#b05070;transform:scale(1.04)}
-.btn-teal{background:#4aaa90;color:#fff;border-color:#4aaa90}.btn-teal:hover{background:#3a8a72;transform:scale(1.04)}
+.btn-pink{background:#c86080;color:#fff;border-color:#c86080}.btn-pink:hover{background:#a84060;transform:scale(1.04)}
+.btn-lang{font-family:'Gaegu',cursive;font-size:1.2rem;padding:1rem 2.5rem;border-radius:20px;border:2.5px solid;cursor:pointer;transition:all 0.3s;margin:0.6rem;min-height:54px;min-width:160px}
+.btn-lang-en{background:#e8f4d8;color:#3a6a20;border-color:#7aaa60}.btn-lang-en:hover{background:#7aaa60;color:#fff;transform:scale(1.05)}
+.btn-lang-zh{background:#f0e8f8;color:#5a3a80;border-color:#9a70c0}.btn-lang-zh:hover{background:#9a70c0;color:#fff;transform:scale(1.05)}
 .btn-sm{font-size:0.82rem;padding:0.4rem 1.2rem;min-height:40px;opacity:0.85}
 .btn-row{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem;margin-top:0.8rem}
 
@@ -37,25 +39,26 @@ textarea.wc-box{font-family:'Nanum Pen Script',cursive;font-size:1.15rem;backgro
 textarea.wc-box::placeholder{color:#c0a080}
 textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholder{color:#c0a0d0}
 
+/* Message card */
 .msg-card{border-radius:22px;padding:2rem;max-width:500px;width:100%;position:relative;margin:0.8rem 0;box-shadow:0 6px 28px rgba(100,70,40,0.1)}
 .msg-card .deco{position:absolute;top:-15px;right:18px;font-size:2rem}
 .msg-card .greeting{font-family:'Gaegu',cursive;font-size:1.5rem;margin-bottom:0.7rem}
 .msg-card .body{font-family:'Lora',serif;font-size:0.93rem;line-height:2;min-height:50px}
 .msg-card .sig{font-family:'Nanum Pen Script',cursive;font-size:1.4rem;text-align:right;margin-top:1rem;opacity:0.85}
-.screenshot-hint{position:absolute;top:-40px;left:50%;transform:translateX(-50%);background:rgba(80,55,30,0.88);color:#f5efe6;font-family:'Gaegu',cursive;font-size:0.82rem;padding:0.35rem 1rem;border-radius:12px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity 0.5s}
+.screenshot-hint{position:absolute;top:-40px;left:50%;transform:translateX(-50%);background:rgba(80,55,30,0.88);color:#f5efe6;font-family:'Gaegu',cursive;font-size:0.82rem;padding:0.35rem 1rem;border-radius:12px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity 0.5s;z-index:10}
 .screenshot-hint.show{opacity:1}
-
 .micro-gift{display:none;flex-direction:column;align-items:center;gap:0.5rem;margin-top:0.8rem;animation:fadeIn 0.8s ease both}
 .micro-gift .gift-icon{font-size:2.8rem;animation:giftFloat 2s ease-in-out infinite alternate}
 @keyframes giftFloat{from{transform:translateY(0)}to{transform:translateY(-7px)}}
 .micro-gift .gift-note{font-family:'Nanum Pen Script',cursive;font-size:1.2rem;color:#9a8070}
 
+/* Grocery */
 .cart-area{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin:0.6rem 0;font-size:1.8rem}
 .basket-wrap{position:relative}
 .cart-badge{position:absolute;top:-6px;right:-8px;background:#7aaa60;color:#fff;border-radius:50%;width:18px;height:18px;font-size:0.6rem;font-family:'Gaegu',cursive;display:none;align-items:center;justify-content:center}
 .cart-bounce{animation:cBounce 0.35s ease}
 @keyframes cBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
-.grocery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.85rem;width:100%;margin:0.8rem 0}
+.grocery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:0.85rem;width:100%;margin:0.8rem 0}
 .g-item{background:rgba(255,255,255,0.78);border:1.5px solid #d4b8a0;border-radius:16px;padding:0.85rem 0.65rem;text-align:center;cursor:pointer;transition:all 0.22s;position:relative;user-select:none;min-height:44px}
 .g-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.96)}
 .g-item.picked{border-color:#7aaa60;border-width:2px;background:rgba(200,240,180,0.42)}
@@ -68,17 +71,21 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
 .fly-emoji{position:fixed;font-size:1.6rem;pointer-events:none;z-index:500}
 .grocery-sub{font-family:'Lora',serif;font-style:italic;font-size:0.74rem;color:#8aaa70;text-align:center;margin-top:0.5rem;opacity:0.82;max-width:480px;line-height:1.6}
 .nudge-msg{font-family:'Gaegu',cursive;font-size:0.82rem;color:#9a7a50;text-align:center;margin-top:0.3rem;display:none}
+.others-input{font-family:'Nanum Pen Script',cursive;font-size:1.1rem;background:rgba(255,255,255,0.85);border:1.5px solid #a0c880;border-radius:12px;padding:0.5rem 1rem;width:100%;max-width:360px;outline:none;color:#3a5a20;margin-top:0.5rem;display:none;min-height:44px}
+.others-input::placeholder{color:#a0b880}
 
-.gpea-tip{background:rgba(255,255,255,0.65);border:1.5px solid #d0b8e8;border-radius:16px;padding:0.9rem 1.1rem;margin-top:1rem;width:100%;max-width:460px}
-.gpea-tip p{font-family:'Lora',serif;font-size:0.82rem;color:#7a5a90;font-style:italic;line-height:1.7;text-align:center}
+/* GPEA */
+.gpea-tip{background:rgba(255,255,255,0.65);border:1.5px solid #d0b8e8;border-radius:16px;padding:1rem 1.2rem;margin-top:0.5rem;width:100%;max-width:480px}
+.gpea-tip p{font-family:'Lora',serif;font-size:0.88rem;color:#7a5a90;font-style:italic;line-height:1.8;text-align:center}
 .gpea-tip strong{font-style:normal;color:#5a3a70}
-
 .micro-resp{font-family:'Nanum Pen Script',cursive;font-size:1.5rem;color:#7a5a90;text-align:center;margin-top:1rem;opacity:0;transition:opacity 0.8s;min-height:2rem}
 .micro-resp.show{opacity:1}
 
+/* Fireflies */
 .ff{position:absolute;border-radius:50%;background:#c8f080;animation:ffloat linear infinite;opacity:0;pointer-events:none}
 @keyframes ffloat{0%{opacity:0;transform:translateY(100vh)}10%{opacity:0.85}90%{opacity:0.5}100%{opacity:0;transform:translateY(-8vh)}}
 
+/* Clouds */
 .cloud-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
 .cloud-shape{position:absolute;background:white;border-radius:50%;opacity:0.18;animation:cloudDrift linear infinite}
 @keyframes cloudDrift{from{transform:translateX(-150px)}to{transform:translateX(calc(100vw + 150px))}}
@@ -91,12 +98,14 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
 .con-card .c-label{font-family:'Gaegu',cursive;font-size:1rem;color:#6a5a8a;display:block}
 .con-card .c-val{font-family:'Lora',serif;font-size:0.78rem;color:#9a8ab0;margin-top:0.15rem;word-break:break-all}
 
+/* Progress dots */
 .progress-dots{display:flex;gap:5px;justify-content:center;margin-top:2rem;flex-wrap:wrap}
 .pdot{width:22px;height:22px;border-radius:50%;background:rgba(100,80,60,0.13);transition:all 0.4s;display:flex;align-items:center;justify-content:center;font-size:0.62rem}
 .pdot.on{background:rgba(100,80,60,0.52);transform:scale(1.3)}
 .pdot-dk{background:rgba(200,220,160,0.16)}.pdot-dk.on{background:rgba(200,220,160,0.72)}
 .pdot-cl{background:rgba(100,100,160,0.12)}.pdot-cl.on{background:rgba(100,100,180,0.55)}
 
+/* Overlay + loading */
 .overlay{position:fixed;inset:0;background:rgba(245,239,230,0);pointer-events:none;transition:background 0.55s;z-index:800}
 .overlay.fade{background:rgba(245,239,230,1)}
 #loadingScreen{position:fixed;inset:0;background:#f0ece4;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:900;transition:opacity 0.7s}
@@ -107,34 +116,40 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
 @keyframes bearPop{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 .load-txt{font-family:'Gaegu',cursive;font-size:1.3rem;color:#7a6a5a;animation:pulse 1.2s ease-in-out infinite alternate}
 @keyframes pulse{from{opacity:0.5}to{opacity:1}}
-.load-timeout{font-family:'Lora',serif;font-style:italic;font-size:0.85rem;color:#b09080;margin-top:0.6rem;display:none}
+.load-timeout{font-family:'Lora',serif;font-style:italic;font-size:0.85rem;color:#b09080;margin-top:0.6rem;display:none;text-align:center;max-width:280px}
 
+/* Toast */
 .toast{position:fixed;bottom:1.8rem;left:50%;transform:translateX(-50%) translateY(12px);background:rgba(60,45,30,0.9);color:#f5efe6;font-family:'Gaegu',cursive;font-size:0.95rem;padding:0.5rem 1.5rem;border-radius:20px;opacity:0;transition:all 0.4s;pointer-events:none;z-index:700;white-space:nowrap;max-width:90vw;text-align:center}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .exit-btn{position:fixed;top:0.8rem;right:0.8rem;z-index:600;font-family:'Gaegu',cursive;font-size:0.8rem;background:rgba(255,255,255,0.75);border:1.5px solid #c0a090;color:#9a7060;border-radius:20px;padding:0.3rem 0.9rem;cursor:pointer;transition:all 0.25s;backdrop-filter:blur(4px);min-height:36px;display:none}
 .exit-btn:hover{background:rgba(255,255,255,0.96)}
 
+/* Animations */
 .fade-in{animation:fadeIn 1s ease both}
 .fade-up{animation:fadeUp 0.9s ease both}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
-.leaf{position:absolute;pointer-events:none;animation:leafFall linear infinite;opacity:0;font-size:1rem;z-index:1}
-@keyframes leafFall{0%{opacity:0;transform:translateY(-20px) rotate(0deg)}8%{opacity:0.8}92%{opacity:0.4}100%{opacity:0;transform:translateY(108vh) rotate(400deg)}}
+/* Falling flowers */
+.flower{position:absolute;pointer-events:none;animation:flowerFall linear infinite;opacity:0;z-index:1}
+@keyframes flowerFall{0%{opacity:0;transform:translateY(-20px) rotate(0deg)}8%{opacity:0.9}92%{opacity:0.5}100%{opacity:0;transform:translateY(108vh) rotate(360deg)}}
 
-.easter-egg{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);font-family:'Nanum Pen Script',cursive;font-size:1rem;color:#c08020;opacity:0;transition:opacity 1.5s;pointer-events:none;text-align:center;white-space:nowrap;z-index:10}
+/* Easter egg */
+.easter-egg{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);font-family:'Nanum Pen Script',cursive;font-size:1rem;color:#3a7050;opacity:0;transition:opacity 1.5s;pointer-events:none;text-align:center;z-index:10;max-width:90vw;white-space:nowrap}
 .easter-egg.show{opacity:1}
 
 /* Screen backgrounds — all distinct */
-#s0{background:linear-gradient(145deg,#e0eaf8 0%,#ccd8f0 100%)}           /* soft blue */
-#s1{background:linear-gradient(180deg,#c8dfa8 0%,#ddefcc 45%,#f5efe6 100%)} /* green */
-#s2{background:linear-gradient(160deg,#fce8d8 0%,#f5ddc8 100%)}            /* peach */
-#s3{background:linear-gradient(160deg,#fcd8e8 0%,#f5c8dc 100%)}            /* pink */
-#s4{background:linear-gradient(180deg,#d8f0e0 0%,#c4e8cc 100%)}            /* mint green */
-#s5{background:linear-gradient(160deg,#e8d8f8 0%,#dcc8f0 100%)}            /* lavender */
-#s6{background:linear-gradient(180deg,#1a2a1a 0%,#243820 100%)}            /* dark forest */
-#s7{background:linear-gradient(160deg,#d8ecf8 0%,#cce0f4 100%)}            /* sky blue */
-#s8{background:linear-gradient(180deg,#d8f0e8 0%,#c4e8da 100%)}            /* soft teal-green */
+#s0 {background:linear-gradient(160deg,#f5efe6 0%,#ede8dc 100%)}   /* warm cream */
+#s1 {background:linear-gradient(145deg,#e8e0f0 0%,#f0eaf8 100%)}   /* lavender */
+#s2 {background:linear-gradient(180deg,#c8dfa8 0%,#ddefcc 45%,#f5efe6 100%)} /* sage green */
+#s3 {background:linear-gradient(160deg,#fce8d8 0%,#f5ddc8 100%)}   /* warm peach */
+#s4 {background:linear-gradient(160deg,#fcd8e8 0%,#f5c8dc 100%)}   /* dusty pink */
+#s5 {background:linear-gradient(180deg,#d8f0e0 0%,#c4e8cc 100%)}   /* mint green */
+#s6 {background:linear-gradient(160deg,#e8d8f8 0%,#dcc8f0 100%)}   /* lavender */
+#s6b{background:linear-gradient(160deg,#e8d8f8 0%,#dcc8f0 100%)}   /* same lavender */
+#s7 {background:linear-gradient(180deg,#1e2e1e 0%,#2a3e22 100%)}   /* dark forest */
+#s8 {background:linear-gradient(160deg,#dce8f8 0%,#e8dff5 60%,#f5f0ff 100%)} /* periwinkle */
+#s9 {background:linear-gradient(180deg,#d8f0e8 0%,#c4e8da 100%)}   /* teal green */
 
 @media(max-width:480px){
   .t-title{font-size:1.65rem}
@@ -143,194 +158,173 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
   .con-card{width:100%;max-width:300px}
   .g-item .g-desc{display:none}
   .g-item.picked .g-desc{display:block}
+  .btn-lang{min-width:130px;padding:0.8rem 1.5rem}
 }
 </style>
 </head>
 <body>
 
+<!-- Loading -->
 <div id="loadingScreen">
   <div class="load-bears"><span class="load-bear">🐻</span><span class="load-bear">🐻‍❄️</span><span class="load-bear">🐻</span></div>
-  <div class="load-txt">entering the forest... 🌿</div>
+  <div class="load-txt" id="loadTxt">entering the forest... 🌿</div>
   <div class="load-timeout" id="loadTimeout">the forest is a little slow today — try refreshing 🌿</div>
 </div>
 <div class="overlay" id="overlay"></div>
 <div class="toast" id="toast"></div>
 <button class="exit-btn" id="exitBtn" onclick="closeWindow()">✕ leave the forest</button>
 
-<!-- ════ S0 Passkey ════ -->
+<!-- ════ S0: Language Selection ════ -->
 <div id="s0" class="screen active">
   <div class="content">
-    <div style="font-size:3rem;text-align:center;margin-bottom:0.8rem" class="fade-in">🔐</div>
-    <h1 class="t-title fade-in" style="color:#3a5a90;animation-delay:0.2s">Graf's Secret Forest</h1>
-    <p class="t-sub fade-up" style="color:#5a7aaa;animation-delay:0.4s">as a data professional, security is our top priority 🌿<br>enter the passkey to get in</p>
-    <div class="fade-up" style="display:flex;flex-direction:column;align-items:center;gap:0.7rem;margin-top:1.5rem;animation-delay:0.6s">
-      <label class="t-hand" style="color:#5a70a0;font-size:1.1rem">passkey?</label>
-      <input id="passInput" class="txt-input pass-input" placeholder="type it here..." type="password" autocomplete="off"/>
-      <p id="passError" style="font-family:'Lora',serif;font-style:italic;color:#c05060;font-size:0.85rem;display:none">hmm, not quite right — ask Graf on Slack!</p>
-      <p style="font-family:'Gaegu',cursive;font-size:0.8rem;color:#7a90c0">no passkey? → slack Graf 🐻</p>
-      <button class="btn btn-sky" onclick="checkPass()">unlock the forest →</button>
+    <div style="font-size:3rem;text-align:center;margin-bottom:0.8rem" class="fade-in">🌍</div>
+    <h1 class="t-title fade-in" style="color:#4a6040;animation-delay:0.2s">
+      Choose your language<br>
+      <span style="font-size:1.5rem;color:#7a8a60">選擇你舒服的語言</span>
+    </h1>
+    <p class="t-sub fade-up" style="color:#7a8a60;animation-delay:0.4s">
+      the forest speaks both &nbsp;·&nbsp; 中文英文攏誒通
+    </p>
+    <div class="fade-up" style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.8rem;margin-top:2rem;animation-delay:0.6s">
+      <button class="btn-lang btn-lang-en" onclick="setLang('en')">English</button>
+      <button class="btn-lang btn-lang-zh" onclick="setLang('zh')">中文</button>
     </div>
     <div class="progress-dots" id="pd0"></div>
   </div>
 </div>
 
-<!-- ════ S1 Welcome ════ -->
+<!-- ════ S1: Passkey ════ -->
 <div id="s1" class="screen">
-  <div id="leavesWrap" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1"></div>
   <div class="content">
-    <!-- THREE BEARS SVG — clean, cute, simple -->
-    <div class="fade-in" style="width:100%;max-width:540px;margin-bottom:0.3rem">
-      <svg viewBox="0 0 540 230" width="100%" xmlns="http://www.w3.org/2000/svg">
-        <!-- ground -->
-        <ellipse cx="270" cy="210" rx="280" ry="36" fill="#b8d490" opacity="0.4"/>
-        <!-- bg trees simple -->
-        <ellipse cx="42" cy="100" rx="28" ry="46" fill="#7aaa58" opacity="0.22"/>
-        <ellipse cx="498" cy="96" rx="30" ry="48" fill="#7aaa58" opacity="0.2"/>
-        <rect x="39" y="142" width="7" height="40" rx="3" fill="#8a6a40" opacity="0.3"/>
-        <rect x="495" y="140" width="7" height="42" rx="3" fill="#8a6a40" opacity="0.28"/>
-        <ellipse cx="108" cy="115" rx="24" ry="40" fill="#90b868" opacity="0.22"/>
-        <ellipse cx="432" cy="110" rx="26" ry="42" fill="#90b868" opacity="0.2"/>
-        <rect x="105" y="152" width="6" height="36" rx="3" fill="#7a5a30" opacity="0.3"/>
-        <rect x="429" y="148" width="6" height="38" rx="3" fill="#7a5a30" opacity="0.28"/>
-        <!-- flowers -->
-        <circle cx="78" cy="205" r="6" fill="#f8d040" opacity="0.7"/><circle cx="78" cy="205" r="3" fill="#8a5020" opacity="0.75"/>
-        <circle cx="195" cy="210" r="5" fill="#f0a0b8" opacity="0.68"/><circle cx="200" cy="207" r="3.5" fill="#e080a0" opacity="0.6"/>
-        <circle cx="355" cy="208" r="5" fill="#f8d040" opacity="0.68"/><circle cx="355" cy="208" r="2.5" fill="#8a5020" opacity="0.72"/>
-        <circle cx="468" cy="206" r="5" fill="#f0a0b8" opacity="0.65"/>
-
-        <!-- ══ BLACK BEAR left — arm raised dancing ══ -->
-        <!-- body round -->
-        <ellipse cx="115" cy="182" rx="30" ry="22" fill="#3a3030"/>
-        <!-- tummy lighter -->
-        <ellipse cx="115" cy="185" rx="18" ry="14" fill="#5a4a40" opacity="0.5"/>
-        <!-- head -->
-        <circle cx="115" cy="152" r="22" fill="#3a3030"/>
-        <!-- ears -->
-        <circle cx="98" cy="134" r="10" fill="#3a3030"/>
-        <circle cx="98" cy="134" r="6" fill="#5a4040"/>
-        <circle cx="132" cy="134" r="10" fill="#3a3030"/>
-        <circle cx="132" cy="134" r="6" fill="#5a4040"/>
-        <!-- face -->
-        <ellipse cx="115" cy="158" rx="10" ry="7" fill="#5a4040" opacity="0.6"/>
-        <!-- eyes — simple dots -->
-        <circle cx="107" cy="149" r="3" fill="#1a1010"/>
-        <circle cx="123" cy="149" r="3" fill="#1a1010"/>
-        <circle cx="108" cy="148" r="1" fill="white"/>
-        <circle cx="124" cy="148" r="1" fill="white"/>
-        <!-- nose -->
-        <ellipse cx="115" cy="156" rx="3.5" ry="2.5" fill="#2a1818"/>
-        <!-- blush -->
-        <ellipse cx="104" cy="158" rx="6" ry="3.5" fill="#f0b0b0" opacity="0.4"/>
-        <ellipse cx="126" cy="158" rx="6" ry="3.5" fill="#f0b0b0" opacity="0.4"/>
-        <!-- legs thick -->
-        <ellipse cx="104" cy="200" rx="10" ry="14" fill="#3a3030" transform="rotate(-8,104,200)"/>
-        <ellipse cx="126" cy="202" rx="10" ry="13" fill="#3a3030" transform="rotate(6,126,202)"/>
-        <ellipse cx="102" cy="212" rx="11" ry="5" fill="#2a2020"/>
-        <ellipse cx="127" cy="213" rx="11" ry="5" fill="#2a2020"/>
-        <!-- arm raised up -->
-        <ellipse cx="91" cy="162" rx="9" ry="14" fill="#3a3030" transform="rotate(-55,91,162)"/>
-        <ellipse cx="82" cy="150" rx="8" ry="6" fill="#3a3030"/>
-        <!-- arm reaching right -->
-        <ellipse cx="140" cy="186" rx="14" ry="8" fill="#3a3030" transform="rotate(15,140,186)"/>
-
-        <!-- ══ POLAR BEAR center — Graf, hugging pose ══ -->
-        <!-- body -->
-        <ellipse cx="270" cy="184" rx="36" ry="26" fill="#f0ece4"/>
-        <!-- tummy -->
-        <ellipse cx="270" cy="188" rx="22" ry="16" fill="#fffaf5" opacity="0.7"/>
-        <!-- head -->
-        <circle cx="270" cy="150" r="26" fill="#f0ece4"/>
-        <!-- ears -->
-        <circle cx="250" cy="130" r="11" fill="#f0ece4"/>
-        <circle cx="250" cy="130" r="6.5" fill="#e8d8cc" opacity="0.8"/>
-        <circle cx="290" cy="130" r="11" fill="#f0ece4"/>
-        <circle cx="290" cy="130" r="6.5" fill="#e8d8cc" opacity="0.8"/>
-        <!-- muzzle -->
-        <ellipse cx="270" cy="158" rx="12" ry="9" fill="#fffaf5" opacity="0.9"/>
-        <!-- eyes — happy curved -->
-        <path d="M260 145 Q264 141 268 145" stroke="#3a2a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M272 145 Q276 141 280 145" stroke="#3a2a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <!-- nose -->
-        <ellipse cx="270" cy="155" rx="4" ry="3" fill="#c8a8a0"/>
-        <!-- smile -->
-        <path d="M263 161 Q270 167 277 161" stroke="#b08878" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-        <!-- blush -->
-        <ellipse cx="254" cy="160" rx="7" ry="4" fill="#f4b8b0" opacity="0.5"/>
-        <ellipse cx="286" cy="160" rx="7" ry="4" fill="#f4b8b0" opacity="0.5"/>
-        <!-- scarf -->
-        <path d="M248 172 Q270 180 292 172" stroke="#d48090" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.8"/>
-        <path d="M248 172 Q270 178 292 172" stroke="#f4a8b8" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
-        <!-- legs -->
-        <ellipse cx="258" cy="205" rx="11" ry="14" fill="#f0ece4" transform="rotate(-5,258,205)"/>
-        <ellipse cx="282" cy="206" rx="11" ry="13" fill="#f0ece4" transform="rotate(5,282,206)"/>
-        <ellipse cx="256" cy="217" rx="12" ry="5.5" fill="#e8e0d4"/>
-        <ellipse cx="284" cy="218" rx="12" ry="5.5" fill="#e8e0d4"/>
-        <!-- arms open wide -->
-        <ellipse cx="232" cy="186" rx="16" ry="9" fill="#f0ece4" transform="rotate(-22,232,186)"/>
-        <ellipse cx="232" cy="195" rx="10" ry="7" fill="#f0ece4"/>
-        <ellipse cx="308" cy="186" rx="16" ry="9" fill="#f0ece4" transform="rotate(22,308,186)"/>
-        <ellipse cx="308" cy="195" rx="10" ry="7" fill="#f0ece4"/>
-
-        <!-- ══ BROWN BEAR right — foot lifted ══ -->
-        <!-- body -->
-        <ellipse cx="425" cy="183" rx="31" ry="22" fill="#8a5a30"/>
-        <!-- tummy -->
-        <ellipse cx="425" cy="186" rx="18" ry="13" fill="#c09060" opacity="0.45"/>
-        <!-- head -->
-        <circle cx="425" cy="153" r="23" fill="#8a5a30"/>
-        <!-- ears -->
-        <circle cx="407" cy="134" r="10" fill="#8a5a30"/>
-        <circle cx="407" cy="134" r="6" fill="#a07040"/>
-        <circle cx="443" cy="134" r="10" fill="#8a5a30"/>
-        <circle cx="443" cy="134" r="6" fill="#a07040"/>
-        <!-- muzzle -->
-        <ellipse cx="425" cy="159" rx="10" ry="7.5" fill="#c09060" opacity="0.7"/>
-        <!-- eyes dots -->
-        <circle cx="417" cy="149" r="3" fill="#2a1808"/>
-        <circle cx="433" cy="149" r="3" fill="#2a1808"/>
-        <circle cx="418" cy="148" r="1" fill="white"/>
-        <circle cx="434" cy="148" r="1" fill="white"/>
-        <!-- nose -->
-        <ellipse cx="425" cy="157" rx="3.5" ry="2.5" fill="#6a3820"/>
-        <!-- blush -->
-        <ellipse cx="414" cy="160" rx="5.5" ry="3.5" fill="#f0b8a0" opacity="0.38"/>
-        <ellipse cx="436" cy="160" rx="5.5" ry="3.5" fill="#f0b8a0" opacity="0.38"/>
-        <!-- legs — one foot lifted -->
-        <ellipse cx="414" cy="202" rx="10" ry="13" fill="#8a5a30" transform="rotate(-5,414,202)"/>
-        <ellipse cx="412" cy="213" rx="11" ry="5" fill="#7a4a20"/>
-        <!-- lifted leg -->
-        <ellipse cx="437" cy="197" rx="9" ry="12" fill="#8a5a30" transform="rotate(-25,437,197)"/>
-        <ellipse cx="445" cy="192" rx="9" ry="4.5" fill="#7a4a20" transform="rotate(-25,445,192)"/>
-        <!-- arms -->
-        <ellipse cx="402" cy="186" rx="13" ry="8" fill="#8a5a30" transform="rotate(-20,402,186)"/>
-        <ellipse cx="448" cy="183" rx="13" ry="7" fill="#8a5a30" transform="rotate(18,448,183)"/>
-      </svg>
-    </div>
-
-    <h1 class="t-title fade-in" style="color:#4a6741;animation-delay:0.3s">Welcome to Graf's Forest</h1>
-    <p class="t-sub fade-in" style="color:#7a6a5a;animation-delay:0.5s">got 3 minutes? 🌿 stay a little while</p>
-
-    <div class="fade-up" style="display:flex;flex-direction:column;align-items:center;gap:0.7rem;margin-top:1.2rem;animation-delay:0.7s" id="nameForm">
-      <label class="t-hand" style="color:#5a7a50;font-size:1.1rem">What's your name?</label>
-      <input id="nameInput" class="txt-input" placeholder="write here..." autocomplete="off"/>
-      <p id="nfNote" style="font-family:'Lora',serif;font-style:italic;color:#9a8070;font-size:0.85rem;display:none;text-align:center">Graf sends her love to everyone in the forest</p>
-      <div class="btn-row">
-        <button class="btn btn-green" onclick="enterForest()">enter the forest →</button>
-      </div>
-      <button class="btn btn-ghost btn-sm" onclick="comeBackLater()">a little busy — come back later :)</button>
-    </div>
-    <div id="laterMsg" style="display:none;text-align:center;animation:fadeIn 0.8s ease both">
-      <p class="t-hand" style="color:#6a8a50;font-size:1.2rem;line-height:1.8">totally okay!<br>bookmark this and come back when you're ready<br><span style="font-size:1rem;color:#9a8a60">Graf will be here ✦</span></p>
-      <button class="btn btn-ghost btn-sm" style="margin-top:1rem" onclick="showNameForm()">actually, I have 3 mins :)</button>
+    <div style="font-size:3rem;text-align:center;margin-bottom:0.8rem" class="fade-in">🔐</div>
+    <h1 class="t-title fade-in" id="s1title" style="color:#5a3a70;animation-delay:0.2s">Graf's Secret Forest</h1>
+    <p class="t-sub fade-up" id="s1sub" style="color:#8a6a90;animation-delay:0.4s">as a data professional, security is our top priority 🔑 enter the passkey to get in</p>
+    <div class="fade-up" style="display:flex;flex-direction:column;align-items:center;gap:0.7rem;margin-top:1.5rem;animation-delay:0.6s">
+      <label class="t-hand" id="s1label" style="color:#7a5a90;font-size:1.1rem">passkey?</label>
+      <input id="passInput" class="txt-input pass-input" type="password" autocomplete="off"/>
+      <p id="passError" style="font-family:'Lora',serif;font-style:italic;color:#c05060;font-size:0.85rem;display:none">hmm, not quite right — ask Graf on Slack!</p>
+      <p id="s1hint" style="font-family:'Gaegu',cursive;font-size:0.8rem;color:#9a7ab0">no passkey? → slack Graf 🐻</p>
+      <button class="btn btn-purple" id="s1btn" onclick="checkPass()">unlock the forest →</button>
     </div>
     <div class="progress-dots" id="pd1"></div>
   </div>
 </div>
 
-<!-- ════ S2 Message Card ════ -->
+<!-- ════ S2: Welcome ════ -->
 <div id="s2" class="screen">
+  <div id="flowersWrap" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1"></div>
   <div class="content">
-    <p class="t-hand fade-in" style="color:#9a7060;font-size:1.05rem;animation-delay:0.15s">a letter, just for you ✉</p>
+    <!-- THREE BEARS SVG -->
+    <div class="fade-in" style="width:100%;max-width:560px;margin-bottom:0.3rem">
+      <svg viewBox="0 0 680 340" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <rect width="680" height="340" fill="#d8ecc0"/>
+        <ellipse cx="340" cy="318" rx="330" ry="36" fill="#b0d488"/>
+        <!-- trees -->
+        <ellipse cx="52" cy="162" rx="38" ry="74" fill="#a8cc80" opacity="0.75"/>
+        <ellipse cx="52" cy="162" rx="25" ry="57" fill="#90bc68" opacity="0.85"/>
+        <rect x="47" y="228" width="10" height="60" rx="3" fill="#8a6a40" opacity="0.5"/>
+        <ellipse cx="628" cy="156" rx="40" ry="76" fill="#a8cc80" opacity="0.75"/>
+        <ellipse cx="628" cy="156" rx="27" ry="58" fill="#90bc68" opacity="0.85"/>
+        <rect x="623" y="224" width="10" height="62" rx="3" fill="#8a6a40" opacity="0.5"/>
+        <ellipse cx="158" cy="182" rx="28" ry="54" fill="#b8d880" opacity="0.55"/>
+        <rect x="154" y="228" width="8" height="46" rx="3" fill="#8a6a40" opacity="0.42"/>
+        <ellipse cx="522" cy="178" rx="30" ry="56" fill="#b8d880" opacity="0.55"/>
+        <rect x="518" y="226" width="8" height="48" rx="3" fill="#8a6a40" opacity="0.42"/>
+        <!-- ground flowers -->
+        <circle cx="195" cy="310" r="5" fill="#f8d040"/><circle cx="195" cy="310" r="2.5" fill="#9a6020"/>
+        <circle cx="255" cy="316" r="4" fill="#f4a0b8"/>
+        <circle cx="340" cy="318" r="4" fill="#f8f060"/><circle cx="340" cy="318" r="2" fill="#a8a020"/>
+        <circle cx="430" cy="315" r="4" fill="#f4a0b8"/>
+        <circle cx="488" cy="311" r="5" fill="#f8d040"/><circle cx="488" cy="311" r="2.5" fill="#9a6020"/>
+        <!-- BLACK BEAR -->
+        <g transform="translate(148,58)">
+          <ellipse cx="0" cy="158" rx="44" ry="58" fill="#1e1810"/>
+          <ellipse cx="0" cy="163" rx="27" ry="37" fill="#2e2820"/>
+          <polygon points="0,118 -20,168 20,168" fill="#f0ede4" opacity="0.95"/>
+          <circle cx="0" cy="90" r="28" fill="#1e1810"/>
+          <circle cx="-19" cy="66" r="12" fill="#1e1810"/><circle cx="-19" cy="66" r="7" fill="#2e2820"/>
+          <circle cx="19" cy="66" r="12" fill="#1e1810"/><circle cx="19" cy="66" r="7" fill="#2e2820"/>
+          <ellipse cx="0" cy="100" rx="11" ry="8.5" fill="#3a3028"/>
+          <circle cx="-9" cy="84" r="4" fill="#080604"/><circle cx="-7.5" cy="82.5" r="1.5" fill="white"/>
+          <circle cx="9" cy="84" r="4" fill="#080604"/><circle cx="10.5" cy="82.5" r="1.5" fill="white"/>
+          <ellipse cx="0" cy="98" rx="3" ry="2.2" fill="#080604"/>
+          <path d="M-4 104 Q0 109 4 104" stroke="#2a2018" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="-13" cy="100" rx="6" ry="3.5" fill="#d08878" opacity="0.26"/>
+          <ellipse cx="13" cy="100" rx="6" ry="3.5" fill="#d08878" opacity="0.26"/>
+          <ellipse cx="-34" cy="120" rx="10" ry="26" fill="#1e1810" transform="rotate(-40,-34,120)"/>
+          <ellipse cx="44" cy="160" rx="24" ry="10" fill="#1e1810" transform="rotate(10,44,160)"/>
+          <ellipse cx="-16" cy="205" rx="15" ry="20" fill="#1e1810" transform="rotate(-4,-16,205)"/>
+          <ellipse cx="16" cy="206" rx="15" ry="19" fill="#1e1810" transform="rotate(4,16,206)"/>
+          <ellipse cx="-16" cy="222" rx="17" ry="8" fill="#141010"/>
+          <ellipse cx="16" cy="223" rx="17" ry="8" fill="#141010"/>
+        </g>
+        <!-- POLAR BEAR -->
+        <g transform="translate(340,44)">
+          <ellipse cx="0" cy="172" rx="54" ry="68" fill="#f2ede5"/>
+          <ellipse cx="0" cy="178" rx="34" ry="43" fill="#faf8f4" opacity="0.76"/>
+          <circle cx="0" cy="92" r="34" fill="#f2ede5"/>
+          <circle cx="-24" cy="65" r="15" fill="#f2ede5"/><circle cx="-24" cy="65" r="9" fill="#e8d8cc" opacity="0.9"/>
+          <circle cx="24" cy="65" r="15" fill="#f2ede5"/><circle cx="24" cy="65" r="9" fill="#e8d8cc" opacity="0.9"/>
+          <ellipse cx="0" cy="106" rx="16" ry="12" fill="#faf8f4" opacity="0.88"/>
+          <circle cx="-11" cy="87" r="5" fill="#2a1a0a"/><circle cx="-9.2" cy="85.2" r="1.8" fill="white"/>
+          <circle cx="11" cy="87" r="5" fill="#2a1a0a"/><circle cx="12.8" cy="85.2" r="1.8" fill="white"/>
+          <ellipse cx="0" cy="104" rx="5" ry="3.5" fill="#c8a8a0"/>
+          <path d="M-6 111 Q0 118 6 111" stroke="#b08878" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="-18" cy="109" rx="9" ry="5" fill="#f4b0a8" opacity="0.46"/>
+          <ellipse cx="18" cy="109" rx="9" ry="5" fill="#f4b0a8" opacity="0.46"/>
+          <ellipse cx="-68" cy="162" rx="28" ry="11" fill="#f2ede5" transform="rotate(-5,-68,162)"/>
+          <ellipse cx="68" cy="162" rx="28" ry="11" fill="#f2ede5" transform="rotate(5,68,162)"/>
+          <ellipse cx="-22" cy="228" rx="18" ry="24" fill="#f2ede5" transform="rotate(-4,-22,228)"/>
+          <ellipse cx="22" cy="229" rx="18" ry="23" fill="#f2ede5" transform="rotate(4,22,229)"/>
+          <ellipse cx="-22" cy="249" rx="20" ry="10" fill="#e8e0d4"/>
+          <ellipse cx="22" cy="250" rx="20" ry="10" fill="#e8e0d4"/>
+        </g>
+        <!-- BROWN BEAR -->
+        <g transform="translate(532,58)">
+          <ellipse cx="0" cy="158" rx="44" ry="58" fill="#8a5a30"/>
+          <ellipse cx="0" cy="163" rx="27" ry="37" fill="#c09060" opacity="0.44"/>
+          <circle cx="0" cy="90" r="28" fill="#8a5a30"/>
+          <circle cx="-19" cy="66" r="13" fill="#8a5a30"/><circle cx="-19" cy="66" r="7.5" fill="#a07040"/>
+          <circle cx="19" cy="66" r="13" fill="#8a5a30"/><circle cx="19" cy="66" r="7.5" fill="#a07040"/>
+          <ellipse cx="0" cy="100" rx="12" ry="9" fill="#c09060" opacity="0.62"/>
+          <circle cx="-9" cy="84" r="4" fill="#2a1808"/><circle cx="-7.5" cy="82.5" r="1.5" fill="white"/>
+          <circle cx="9" cy="84" r="4" fill="#2a1808"/><circle cx="10.5" cy="82.5" r="1.5" fill="white"/>
+          <ellipse cx="0" cy="98" rx="3" ry="2.2" fill="#5a3010"/>
+          <path d="M-4 104 Q0 109 4 104" stroke="#7a4a20" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="-12" cy="100" rx="6" ry="3.5" fill="#f0b890" opacity="0.36"/>
+          <ellipse cx="12" cy="100" rx="6" ry="3.5" fill="#f0b890" opacity="0.36"/>
+          <ellipse cx="-44" cy="150" rx="24" ry="10" fill="#8a5a30" transform="rotate(14,-44,150)"/>
+          <ellipse cx="42" cy="165" rx="22" ry="10" fill="#8a5a30" transform="rotate(-8,42,165)"/>
+          <ellipse cx="-16" cy="205" rx="15" ry="20" fill="#8a5a30" transform="rotate(-4,-16,205)"/>
+          <ellipse cx="16" cy="206" rx="15" ry="19" fill="#8a5a30" transform="rotate(4,16,206)"/>
+          <ellipse cx="-16" cy="222" rx="17" ry="8" fill="#7a4a20"/>
+          <ellipse cx="16" cy="223" rx="17" ry="8" fill="#7a4a20"/>
+        </g>
+      </svg>
+    </div>
+    <h1 class="t-title fade-in" id="s2title" style="color:#4a6741;animation-delay:0.3s">Welcome to Graf's Forest</h1>
+    <p class="t-sub fade-in" id="s2sub" style="color:#7a6a5a;animation-delay:0.5s">got 3 minutes? stay a little while</p>
+    <div class="fade-up" id="nameForm" style="display:flex;flex-direction:column;align-items:center;gap:0.7rem;margin-top:1.2rem;animation-delay:0.7s">
+      <label class="t-hand" id="s2label" style="color:#5a7a50;font-size:1.1rem">What's your name?</label>
+      <input id="nameInput" class="txt-input" autocomplete="off"/>
+      <p id="nfNote" style="font-family:'Lora',serif;font-style:italic;color:#9a8070;font-size:0.85rem;display:none;text-align:center">Graf sends her love to everyone in the forest 🌲</p>
+      <div class="btn-row">
+        <button class="btn btn-green" id="s2btn" onclick="enterForest()">enter the forest →</button>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="s2btn2" onclick="comeBackLater()">a little busy — come back later :)</button>
+    </div>
+    <div id="laterMsg" style="display:none;text-align:center;animation:fadeIn 0.8s ease both">
+      <p id="laterText" class="t-hand" style="color:#6a8a50;font-size:1.15rem;line-height:1.9">totally okay! bookmark this and come back when you're ready.<br><span style="font-size:1rem;color:#9a8a60">Graf will be here ✦</span></p>
+      <button class="btn btn-ghost btn-sm" id="laterReturn" style="margin-top:1rem" onclick="showNameForm()">actually, I have 3 mins :)</button>
+    </div>
+    <div class="progress-dots" id="pd2"></div>
+  </div>
+</div>
+
+<!-- ════ S3: Message Card ════ -->
+<div id="s3" class="screen">
+  <div class="content">
+    <p class="t-hand fade-in" id="s3header" style="color:#9a7060;font-size:1.05rem;animation-delay:0.15s">a letter, just for you ✉</p>
     <div style="position:relative;width:100%;max-width:500px">
       <div class="screenshot-hint" id="sHint">📸 screenshot to save this!</div>
       <div class="msg-card fade-up" id="msgCard" style="animation-delay:0.35s">
@@ -342,38 +336,37 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
     </div>
     <div class="micro-gift" id="microGift">
       <div class="gift-icon" id="giftIcon">🌸</div>
-      <p class="gift-note">graf left this for you too 🌿</p>
+      <p class="gift-note" id="giftNote">Graf left this for you too 🌲</p>
     </div>
-    <button class="btn btn-ghost fade-up" id="continueBtn" onclick="goTo(3)" style="display:none;margin-top:0.8rem">continue →</button>
-    <div class="progress-dots" id="pd2"></div>
-  </div>
-</div>
-
-<!-- ════ S3 Send Back ════ -->
-<div id="s3" class="screen">
-  <div class="content">
-    <div style="font-size:2.8rem;text-align:center;margin-bottom:0.6rem" class="fade-in">💌</div>
-    <h2 class="t-title fade-in" style="color:#8a3858;animation-delay:0.2s">Want to send something back?</h2>
-    <p class="t-sub fade-up" style="color:#aa6080;animation-delay:0.4s">even a small word makes Graf's heart warm</p>
-    <div class="btn-row fade-up" id="s3btns" style="animation-delay:0.6s">
-      <button class="btn btn-pink" onclick="showMsgBox()">yes, I'd love to 💌</button>
-      <button class="btn btn-ghost" onclick="goTo(4)">take me to the shop</button>
-    </div>
-    <div id="msgBox" style="display:none;width:100%;max-width:460px;margin-top:0.4rem">
-      <textarea class="wc-box" id="replyText" placeholder="Dear Graf, I still remember the day we..."></textarea>
-      <div class="btn-row"><button class="btn btn-pink" onclick="sendMsg()">send with love ✦</button></div>
-    </div>
+    <button class="btn btn-ghost fade-up" id="s3btn" onclick="goTo('s4')" style="display:none;margin-top:0.8rem">continue →</button>
     <div class="progress-dots" id="pd3"></div>
   </div>
 </div>
 
-<!-- ════ S4 Pack Suitcase ════ -->
+<!-- ════ S4: Send Something Back ════ -->
 <div id="s4" class="screen">
   <div class="content">
-    <div style="font-size:2.6rem;text-align:center;margin-bottom:0.3rem" class="fade-in">🧳</div>
-    <h2 class="t-title fade-in" style="color:#3a6a40;animation-delay:0.2s">help Graf pack?</h2>
-    <p class="t-sub fade-up" style="color:#5a8a58;animation-delay:0.35s">she's heading somewhere new — pick what she might need out there</p>
-    <p class="t-sub fade-up" style="color:#7aaa70;animation-delay:0.45s;font-size:0.8rem">(right, it's a donation page — no recurring charges, no payment failures, just single gifts of love for her next chapter)</p>
+    <div style="font-size:2.8rem;text-align:center;margin-bottom:0.6rem" class="fade-in">💌</div>
+    <h2 class="t-title fade-in" id="s4title" style="color:#8a3858;animation-delay:0.2s">Want to send something back?</h2>
+    <p class="t-sub fade-up" id="s4sub" style="color:#aa6080;animation-delay:0.4s">even a small word makes Graf's heart warm</p>
+    <div class="btn-row fade-up" id="s4btns" style="animation-delay:0.6s">
+      <button class="btn btn-pink" id="s4yes" onclick="showMsgBox()">yes, I'd love to 💌</button>
+      <button class="btn btn-ghost" id="s4skip" onclick="goTo('s5')">take me to the shop</button>
+    </div>
+    <div id="msgBox" style="display:none;width:100%;max-width:460px;margin-top:0.4rem">
+      <textarea class="wc-box" id="replyText"></textarea>
+      <div class="btn-row"><button class="btn btn-pink" id="s4send" onclick="sendMsg()">send with love ✦</button></div>
+    </div>
+    <div class="progress-dots" id="pd4"></div>
+  </div>
+</div>
+
+<!-- ════ S5: Virtual Gift Shop ════ -->
+<div id="s5" class="screen">
+  <div class="content">
+    <div style="font-size:2.6rem;text-align:center;margin-bottom:0.3rem" class="fade-in">🎮</div>
+    <h2 class="t-title fade-in" id="s5title" style="color:#3a6a40;animation-delay:0.2s">send Graf a virtual gift?</h2>
+    <p class="t-sub fade-up" id="s5sub" style="color:#5a8a58;animation-delay:0.35s">this is just for fun hehe, no real money, no checkout, no debit fail. just pick what you'd wish for Graf and send some good vibes her way</p>
     <div class="cart-area fade-up" style="animation-delay:0.5s">
       <span id="seedling" style="font-size:2rem;transition:all 0.4s">🌱</span>
       <div class="basket-wrap">
@@ -382,53 +375,54 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
       </div>
     </div>
     <div class="grocery-grid fade-up" id="groceryGrid" style="animation-delay:0.6s;max-width:520px"></div>
-    <p class="nudge-msg" id="nudgeMsg">pick something first? 🌿 <span style="cursor:pointer;text-decoration:underline" onclick="sendGrocery(true)">skip anyway</span></p>
+    <input type="text" class="others-input" id="othersInput"/>
+    <p class="nudge-msg" id="nudgeMsg"></p>
     <div class="btn-row fade-up" style="animation-delay:0.8s">
-      <button class="btn btn-green" onclick="sendGrocery(false)">pack these for Graf</button>
-      <button class="btn btn-ghost" onclick="goTo(5)">skip for now</button>
+      <button class="btn btn-green" id="s5send" onclick="sendGrocery(false)">send these to Graf 🎁</button>
+      <button class="btn btn-ghost" id="s5skip" onclick="goTo('s6')">skip for now</button>
     </div>
-    <p class="grocery-sub fade-up" style="animation-delay:0.9s">Graf maintains strict financial transparency: 95% of her funding comes from independent individuals. real-time count above — no annual receipt will be mailed 🌿</p>
-    <div class="progress-dots" id="pd4"></div>
-  </div>
-</div>
-
-<!-- ════ S5 One Last Thing ════ -->
-<div id="s5" class="screen">
-  <div class="content">
-    <div style="font-size:2.8rem;text-align:center;margin-bottom:0.5rem" class="fade-in">🎀</div>
-    <h2 class="t-title fade-in" style="color:#5a3a78;animation-delay:0.2s">one last thing?</h2>
-    <p class="t-sub fade-up" style="color:#7a5a98;animation-delay:0.35s">the last Asana ticket assigned to Graf — advice, requests, or feedback welcome.<br>(spotted a bug on this page? report it 👀)</p>
-    <div class="fade-up" style="width:100%;max-width:460px;animation-delay:0.5s">
-      <textarea class="wc-box suggest-box" id="suggestText" placeholder="Hey Graf, I genuinely think you should... / one thing I hope you carry is... / you're better than you think at..."></textarea>
-    </div>
-    <div class="micro-resp" id="microResp"></div>
-    <div class="btn-row fade-up" style="animation-delay:0.7s" id="s5btns">
-      <button class="btn btn-purple" onclick="sendSuggestion()">send this forward ✦</button>
-      <button class="btn btn-ghost" onclick="flushAndGo()">skip for now</button>
-    </div>
+    <p class="grocery-sub fade-up" id="s5sub2" style="animation-delay:0.9s">these are 100% virtual. Graf maintains strict "financial transparency". You can see the real-time gift count above — transparently. (no annual receipt will be mailed to you)</p>
     <div class="progress-dots" id="pd5"></div>
   </div>
 </div>
 
-<!-- ════ S5b GPEA bridge ════ -->
-<div id="s5b" class="screen">
+<!-- ════ S6: One Last Thing ════ -->
+<div id="s6" class="screen">
   <div class="content">
-    <div style="font-size:2.8rem;text-align:center;margin-bottom:0.8rem" class="fade-in">🤖</div>
-    <div class="gpea-tip fade-up" style="animation-delay:0.3s;max-width:480px">
-      <p>✦ psst — <strong>GPEA just leveled up!</strong><br>we can now use AI for analytics and reporting!<br>curious? find us in <strong>#ea-civis-user</strong> on Slack ✦</p>
+    <div style="font-size:2.8rem;text-align:center;margin-bottom:0.5rem" class="fade-in">🎀</div>
+    <h2 class="t-title fade-in" id="s6title" style="color:#5a3a78;animation-delay:0.2s">one last thing?</h2>
+    <p class="t-sub fade-up" id="s6sub" style="color:#7a5a98;animation-delay:0.35s">the last Asana ticket assigned to Graf ~ advice, requests, or feedback welcome. (spotted a bug? report it 👀)</p>
+    <div class="fade-up" style="width:100%;max-width:460px;animation-delay:0.5s">
+      <textarea class="wc-box suggest-box" id="suggestText"></textarea>
     </div>
-    <button class="btn btn-purple fade-up" onclick="goTo(6)" style="animation-delay:0.7s;margin-top:1.2rem">continue →</button>
-    <div class="progress-dots" id="pd5b" style="margin-top:1.5rem"></div>
+    <div class="micro-resp" id="microResp"></div>
+    <div class="btn-row fade-up" style="animation-delay:0.7s" id="s6btns">
+      <button class="btn btn-purple" id="s6send" onclick="sendSuggestion()">send this forward ✦</button>
+      <button class="btn btn-ghost" id="s6skip" onclick="flushAndGo()">skip for now</button>
+    </div>
+    <div class="progress-dots" id="pd6"></div>
   </div>
 </div>
 
-<!-- ════ S6 Kind Words ════ -->
-<div id="s6" class="screen">
+<!-- ════ S6b: GPEA ════ -->
+<div id="s6b" class="screen">
+  <div class="content">
+    <div style="font-size:2.8rem;text-align:center;margin-bottom:0.8rem" class="fade-in">🤖</div>
+    <div class="gpea-tip fade-up" style="animation-delay:0.3s">
+      <p id="gpeatext">Hi @channel — <strong>GPEA just levelled up ✦</strong> we can now use AI agent for analytics and reporting! curious? find us in <strong>#ea-civis-user</strong> on Slack ✦</p>
+    </div>
+    <button class="btn btn-purple fade-up" id="s6bbtn" onclick="goTo('s7')" style="animation-delay:0.7s;margin-top:1.2rem">continue →</button>
+    <div class="progress-dots" id="pd6b"></div>
+  </div>
+</div>
+
+<!-- ════ S7: Kind Words ════ -->
+<div id="s7" class="screen">
   <div id="ffWrap" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1"></div>
   <div class="content">
     <div style="font-size:3.2rem;text-align:center;margin-bottom:0.8rem" class="fade-in">🌙</div>
-    <h2 class="t-title fade-in" style="color:#d4e8b8;font-size:1.85rem;animation-delay:0.25s">Thank you for everything.</h2>
-    <p class="fade-up" style="font-family:'Lora',serif;font-style:italic;color:#b0cc90;font-size:0.92rem;line-height:2.2;text-align:center;margin:1rem 0;max-width:440px;animation-delay:0.6s">
+    <h2 class="t-title fade-in" id="s7title" style="color:#d4e8b8;font-size:1.85rem;animation-delay:0.25s">Thank you for everything.</h2>
+    <p class="fade-up" id="s7body" style="font-family:'Lora',serif;font-style:italic;color:#b0cc90;font-size:0.92rem;line-height:2.2;text-align:center;margin:1rem 0;max-width:440px;animation-delay:0.6s">
       This has been the best team I have ever been part of.<br>
       Every meeting, every ticket, every late deadline —<br>
       I will carry all of it with me.<br><br>
@@ -439,46 +433,44 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
       be a little kinder to yourself than yesterday.<br>
       You've earned it.
     </p>
-    <p class="fade-up" style="font-family:'Nanum Pen Script',cursive;font-size:1.6rem;color:#9aba70;text-align:center;animation-delay:1s">with all my love, Graf</p>
-    <button class="btn fade-up" onclick="goTo(7)" style="border-color:#809a60;color:#c0d4a0;margin-top:1.4rem;animation-delay:1.2s">one more thing →</button>
-    <div class="progress-dots" id="pd6"></div>
+    <p class="fade-up" id="s7sig" style="font-family:'Nanum Pen Script',cursive;font-size:1.6rem;color:#9aba70;text-align:center;animation-delay:1s">with all my love, Graf</p>
+    <button class="btn fade-up" id="s7btn" onclick="goTo('s8')" style="border-color:#809a60;color:#c0d4a0;margin-top:1.4rem;animation-delay:1.2s">one more thing →</button>
+    <div class="progress-dots" id="pd7"></div>
   </div>
 </div>
 
-<!-- ════ S7 Find Me ════ -->
-<div id="s7" class="screen">
+<!-- ════ S8: Stay Connected ════ -->
+<div id="s8" class="screen">
   <div class="cloud-bg" id="cloudBg"></div>
   <div class="content">
     <div style="font-size:3rem;text-align:center;margin-bottom:0.5rem" class="fade-in">☁️</div>
-    <h2 class="t-title fade-in" style="color:#4a6a9a;animation-delay:0.2s">find me here</h2>
-    <p class="t-sub fade-up" style="color:#6a80aa;animation-delay:0.35s">you're not losing Graf — she's just floating somewhere nearby</p>
-    <p class="fade-up" style="font-family:'Lora',serif;font-style:italic;font-size:0.8rem;color:#8a90b8;margin-top:0.3rem;animation-delay:0.45s">✦ tap any card to copy or open</p>
+    <h2 class="t-title fade-in" id="s8title" style="color:#4a6a9a;animation-delay:0.2s">find me here</h2>
+    <p class="t-sub fade-up" id="s8sub" style="color:#6a80aa;animation-delay:0.35s">you're not losing Graf — she's just floating somewhere nearby</p>
+    <p class="fade-up" id="s8hint" style="font-family:'Lora',serif;font-style:italic;font-size:0.8rem;color:#8a90b8;margin-top:0.3rem;animation-delay:0.45s">✦ tap any card to copy or open</p>
     <div class="con-cards fade-up" style="animation-delay:0.6s">
-      <div class="con-card" onclick="copyTxt('grafyingmay@gmail.com','Email copied! 📮')">
+      <div class="con-card" onclick="copyTxt('grafyingmay@gmail.com','emailCopied')">
         <div class="c-icon">📮</div><span class="c-label">Email</span><span class="c-val">grafyingmay@gmail.com</span>
       </div>
-      <div class="con-card" onclick="copyTxt('+886 934042621','WhatsApp copied! 💬')">
+      <div class="con-card" onclick="copyTxt('+886 934042621','waCopied')">
         <div class="c-icon">💬</div><span class="c-label">WhatsApp</span><span class="c-val">+886 934042621</span>
       </div>
       <div class="con-card" onclick="openLink('https://www.linkedin.com/in/peiyingyeh/')">
         <div class="c-icon">🔗</div><span class="c-label">LinkedIn</span><span class="c-val">linkedin.com/in/peiyingyeh</span>
       </div>
     </div>
-    <button class="btn btn-sky fade-up" onclick="goTo(8)" style="animation-delay:0.8s">see what's next →</button>
-    <div class="progress-dots" id="pd7"></div>
+    <button class="btn btn-sky fade-up" id="s8btn" onclick="goTo('s9')" style="animation-delay:0.8s">see what's next →</button>
+    <div class="progress-dots" id="pd8"></div>
   </div>
 </div>
 
-<!-- ════ S8 Graf's Ready ════ -->
-<div id="s8" class="screen">
+<!-- ════ S9: Graf's Ready ════ -->
+<div id="s9" class="screen">
   <div class="content">
-    <!-- CLEAN POLAR BEAR with basket/bag -->
+    <!-- Polar bear illustration -->
     <div class="fade-in" style="width:100%;max-width:460px;margin-bottom:0.4rem">
       <svg viewBox="0 0 460 220" width="100%" xmlns="http://www.w3.org/2000/svg">
-        <!-- sun -->
         <circle cx="230" cy="68" r="48" fill="#a8d8c0" opacity="0.5"/>
         <circle cx="230" cy="68" r="34" fill="#c8ecd8" opacity="0.6"/>
-        <!-- rays soft teal -->
         <line x1="230" y1="10" x2="230" y2="2" stroke="#6aaa88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
         <line x1="272" y1="22" x2="282" y2="14" stroke="#6aaa88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
         <line x1="300" y1="54" x2="312" y2="48" stroke="#6aaa88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
@@ -486,152 +478,211 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
         <line x1="160" y1="54" x2="148" y2="48" stroke="#6aaa88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
         <line x1="300" y1="84" x2="314" y2="90" stroke="#6aaa88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
         <line x1="160" y1="84" x2="146" y2="90" stroke="#6aaa88" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-        <!-- clouds white -->
         <ellipse cx="82" cy="58" rx="28" ry="16" fill="white" opacity="0.75"/>
         <ellipse cx="100" cy="49" rx="21" ry="14" fill="white" opacity="0.72"/>
-        <ellipse cx="64" cy="54" rx="19" ry="13" fill="white" opacity="0.7"/>
         <ellipse cx="378" cy="46" rx="26" ry="15" fill="white" opacity="0.72"/>
         <ellipse cx="398" cy="38" rx="19" ry="13" fill="white" opacity="0.68"/>
-        <ellipse cx="360" cy="42" rx="17" ry="11" fill="white" opacity="0.68"/>
-        <!-- ground -->
-        <ellipse cx="230" cy="195" rx="240" ry="24" fill="#90c860" opacity="0.3"/>
-        <!-- sparkles teal-gold -->
-        <text x="178" y="128" font-size="12" fill="#70c098" opacity="0.75">✦</text>
+        <ellipse cx="230" cy="198" rx="240" ry="24" fill="#90c860" opacity="0.3"/>
+        <text x="175" y="128" font-size="12" fill="#70c098" opacity="0.75">✦</text>
         <text x="284" y="122" font-size="10" fill="#70c098" opacity="0.7">✦</text>
         <text x="205" y="112" font-size="8" fill="#a0d8b8" opacity="0.8">✦</text>
-
-        <!-- POLAR BEAR clean and cute -->
-        <!-- body -->
-        <ellipse cx="210" cy="178" rx="34" ry="26" fill="#f2ede5"/>
-        <!-- tummy -->
-        <ellipse cx="210" cy="182" rx="20" ry="16" fill="#fffaf6" opacity="0.75"/>
-        <!-- head -->
-        <circle cx="210" cy="143" r="26" fill="#f2ede5"/>
-        <!-- ears -->
-        <circle cx="190" cy="122" r="11" fill="#f2ede5"/>
-        <circle cx="190" cy="122" r="6.5" fill="#e8d8cc" opacity="0.8"/>
-        <circle cx="230" cy="122" r="11" fill="#f2ede5"/>
-        <circle cx="230" cy="122" r="6.5" fill="#e8d8cc" opacity="0.8"/>
-        <!-- muzzle -->
-        <ellipse cx="210" cy="151" rx="11" ry="8" fill="#fffaf6" opacity="0.9"/>
-        <!-- eyes happy dots -->
-        <path d="M201 138 Q205 134 209 138" stroke="#3a2a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M211 138 Q215 134 219 138" stroke="#3a2a1a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <!-- nose -->
-        <ellipse cx="210" cy="149" rx="3.5" ry="2.5" fill="#c8a8a0"/>
-        <!-- smile -->
-        <path d="M204 155 Q210 161 216 155" stroke="#b08878" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-        <!-- blush -->
-        <ellipse cx="196" cy="153" rx="6.5" ry="3.8" fill="#f4b8b0" opacity="0.5"/>
-        <ellipse cx="224" cy="153" rx="6.5" ry="3.8" fill="#f4b8b0" opacity="0.5"/>
-        <!-- scarf -->
-        <path d="M188 164 Q210 172 232 164" stroke="#d48090" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.78"/>
-        <path d="M188 164 Q210 170 232 164" stroke="#f4a8b8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.58"/>
+        <!-- polar bear -->
+        <ellipse cx="220" cy="178" rx="54" ry="38" fill="#f2ede5"/>
+        <ellipse cx="220" cy="184" rx="34" ry="24" fill="#faf8f4" opacity="0.76"/>
+        <circle cx="220" cy="136" r="34" fill="#f2ede5"/>
+        <circle cx="200" cy="112" r="15" fill="#f2ede5"/><circle cx="200" cy="112" r="9" fill="#e8d8cc" opacity="0.9"/>
+        <circle cx="240" cy="112" r="15" fill="#f2ede5"/><circle cx="240" cy="112" r="9" fill="#e8d8cc" opacity="0.9"/>
+        <ellipse cx="220" cy="148" rx="16" ry="12" fill="#faf8f4" opacity="0.88"/>
+        <circle cx="209" cy="131" r="5" fill="#2a1a0a"/><circle cx="207.2" cy="129.2" r="1.8" fill="white"/>
+        <circle cx="231" cy="131" r="5" fill="#2a1a0a"/><circle cx="232.8" cy="129.2" r="1.8" fill="white"/>
+        <ellipse cx="220" cy="146" rx="5" ry="3.5" fill="#c8a8a0"/>
+        <path d="M214 153 Q220 159 226 153" stroke="#b08878" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <ellipse cx="203" cy="150" rx="8" ry="5" fill="#f4b0a8" opacity="0.46"/>
+        <ellipse cx="237" cy="150" rx="8" ry="5" fill="#f4b0a8" opacity="0.46"/>
+        <!-- flat arms -->
+        <ellipse cx="158" cy="172" rx="28" ry="11" fill="#f2ede5" transform="rotate(-5,158,172)"/>
+        <ellipse cx="282" cy="172" rx="28" ry="11" fill="#f2ede5" transform="rotate(5,282,172)"/>
         <!-- legs -->
-        <ellipse cx="199" cy="198" rx="10" ry="13" fill="#f2ede5" transform="rotate(-4,199,198)"/>
-        <ellipse cx="221" cy="199" rx="10" ry="12" fill="#f2ede5" transform="rotate(4,221,199)"/>
-        <ellipse cx="197" cy="209" rx="11" ry="5" fill="#e8e0d4"/>
-        <ellipse cx="223" cy="210" rx="11" ry="5" fill="#e8e0d4"/>
-        <!-- arm holding basket handle -->
-        <ellipse cx="236" cy="172" rx="15" ry="8" fill="#f2ede5" transform="rotate(20,236,172)"/>
-        <ellipse cx="246" cy="178" rx="9" ry="6" fill="#f2ede5"/>
-        <!-- other arm -->
-        <ellipse cx="184" cy="174" rx="14" ry="8" fill="#f2ede5" transform="rotate(-18,184,174)"/>
-
-        <!-- WICKER BASKET — cute, simple -->
-        <!-- basket body -->
-        <ellipse cx="268" cy="183" rx="26" ry="20" fill="#c89a50" opacity="0.92"/>
-        <!-- basket weave lines horizontal -->
-        <line x1="244" y1="178" x2="292" y2="178" stroke="#a07830" stroke-width="1.5" opacity="0.5"/>
-        <line x1="243" y1="184" x2="293" y2="184" stroke="#a07830" stroke-width="1.5" opacity="0.5"/>
-        <line x1="245" y1="190" x2="291" y2="190" stroke="#a07830" stroke-width="1.5" opacity="0.5"/>
-        <!-- basket rim -->
-        <ellipse cx="268" cy="166" rx="26" ry="7" fill="#d4aa60" opacity="0.9"/>
-        <ellipse cx="268" cy="164" rx="24" ry="5" fill="#e8c070" opacity="0.75"/>
-        <!-- basket handle arc -->
-        <path d="M252 165 Q268 145 284 165" stroke="#a07830" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
-        <!-- paw on handle -->
-        <ellipse cx="252" cy="168" rx="7" ry="5" fill="#f2ede5"/>
-        <!-- items peeking out of basket top -->
-        <text x="260" y="167" font-size="10">🌿</text>
-        <text x="271" y="165" font-size="9">⭐</text>
-        <!-- watch -->
-        <ellipse cx="242" cy="180" rx="5" ry="3.2" fill="#d4a830" opacity="0.88" transform="rotate(20,242,180)"/>
+        <ellipse cx="208" cy="206" rx="14" ry="19" fill="#f2ede5" transform="rotate(-4,208,206)"/>
+        <ellipse cx="232" cy="207" rx="14" ry="18" fill="#f2ede5" transform="rotate(4,232,207)"/>
+        <ellipse cx="207" cy="222" rx="16" ry="8" fill="#e8e0d4"/>
+        <ellipse cx="233" cy="223" rx="16" ry="8" fill="#e8e0d4"/>
       </svg>
     </div>
-
-    <h2 class="t-title fade-in" style="color:#2a6a50;font-size:2rem;animation-delay:0.3s">With your love, Graf is ready.</h2>
-    <p class="fade-up" style="font-family:'Lora',serif;font-style:italic;color:#3a7a58;font-size:0.92rem;line-height:2.1;text-align:center;margin:0.9rem 0;max-width:400px;animation-delay:0.6s">
+    <h2 class="t-title fade-in" id="s9title" style="color:#2a6a50;font-size:2rem;animation-delay:0.3s">With your love, Graf is ready.</h2>
+    <p class="fade-up" id="s9body" style="font-family:'Lora',serif;font-style:italic;color:#3a7a58;font-size:0.92rem;line-height:2.1;text-align:center;margin:0.9rem 0;max-width:400px;animation-delay:0.6s">
       A basket full of your kindness.<br>
       A heart full of these memories.<br>
       New roads, new adventures, new bears to meet —<br>
       <strong style="font-style:normal">the best is still ahead.</strong>
     </p>
-    <p class="fade-up" style="font-family:'Nanum Pen Script',cursive;font-size:1.8rem;color:#4a9070;text-align:center;animation-delay:0.9s">see you out there ✦</p>
-    <button class="btn btn-ghost fade-up" onclick="closeWindow()" style="border-color:#5a9070;color:#3a7050;margin-top:0.8rem;animation-delay:1.1s">close this window 🌿</button>
-    <div class="progress-dots" id="pd8"></div>
+    <p class="fade-up" id="s9close" style="font-family:'Nanum Pen Script',cursive;font-size:1.8rem;color:#4a9070;text-align:center;animation-delay:0.9s">see you out there ✦</p>
+    <button class="btn btn-ghost fade-up" id="s9btn" onclick="closeWindow()" style="border-color:#5a9070;color:#3a7050;margin-top:0.8rem;animation-delay:1.1s">🌿close this window</button>
+    <div class="progress-dots" id="pd9"></div>
   </div>
   <div class="easter-egg" id="easterEgg">psst — the passkey still works if you ever miss the forest 🌿</div>
 </div>
 
 <script>
-const APPS_URL = 'https://script.google.com/macros/s/AKfycbzJfWP8lU2r5tsx89_XtST991z32wQ-R9CYq4ax6sXzdjmXnvSt1GaeHuitYZXkv5wQ/exec';
-const PASSKEY  = 'thanksgpea';
+const APPS_URL = 'https://script.google.com/macros/s/AKfycbwmJkaqCf_HAnls9WvPsSpOn7CcDRLNUfnXv4-8q8kt__YaC4DpL5u7BaIkmbaeAjYk/exec';
+const PASSKEY  = 'higpea';
+
+const T = {
+  en: {
+    exitBtn:'✕ leave the forest',
+    loadTxt:'entering the forest... 🌿',
+    loadTimeout:'the forest is a little slow today — try refreshing 🌿',
+    s1title:"Graf's Secret Forest",
+    s1sub:'as a data professional, security is our top priority 🔑 enter the passkey to get in',
+    s1label:'passkey?', s1ph:'type it here...',
+    s1err:'hmm, not quite right — ask Graf on Slack!',
+    s1hint:'no passkey? → slack Graf 🐻', s1btn:'unlock the forest →',
+    s2title:"Welcome to Graf's Forest",
+    s2sub:'got 3 minutes? stay a little while',
+    s2label:"What's your name?", s2ph:'write here...',
+    s2btn:'enter the forest →', s2btn2:'a little busy — come back later :)',
+    laterText:"totally okay! bookmark this and come back when you're ready.",
+    laterSub:'Graf will be here ✦',
+    laterReturn:'actually, I have 3 mins :)',
+    nfNote:'Graf sends her love to everyone in the forest 🌲',
+    s3header:'a letter, just for you ✉',
+    s3sig:'— Graf 🥦 🐻',
+    sHint:'📸 screenshot to save this!',
+    giftNote:'Graf left this for you too 🌲',
+    s3btn:'continue →',
+    s4title:'Want to send something back?',
+    s4sub:"even a small word makes Graf's heart warm",
+    s4yes:"yes, I'd love to 💌", s4skip:'take me to the shop',
+    s4ph:'Dear Graf, I still remember the day we...',
+    s4send:'send with love ✦', s4toast:'flying to Graf! 💌',
+    s5title:'send Graf a virtual gift?',
+    s5sub:'this is just for fun hehe, no real money, no checkout, no debit fail. just pick what you\'d wish for Graf and send some good vibes her way',
+    s5sub2:'these are 100% virtual. Graf maintains strict "financial transparency". You can see the real-time gift count above — transparently. (no annual receipt will be mailed to you)',
+    s5send:'send these to Graf 🎁', s5skip:'skip for now',
+    nudge:'pick something first? 🌿 skip anyway ↗',
+    s5toast:'virtual gifts sent! Graf feels the love ❤️',
+    gCnt:(n)=>`${n} gifted`, othersPh:'what would you give Graf? 🌿',
+    gNames:['Brave Gummy','Warm Soy Milk','Lovely Bear','Greenpeace Love','Lucky Star','AI Tea','Change Chocolate','Resilience Rock','Others'],
+    gDescs:['pop one before every scary new thing','plant-based, low-carbon, still cozy','for days that really need a hug','because the planet needs Graf too','fold one and wish her well','steep slowly, stay curious','sweet outside, adapts on the inside','unbreakable, a little rough, secretly beautiful','write your own gift for Graf!'],
+    s6title:'one last thing?',
+    s6sub:'the last Asana ticket assigned to Graf ~ advice, requests, or feedback welcome. (spotted a bug? report it 👀)',
+    s6ph:"Hey Graf, I genuinely think you should... / one thing I hope you carry is... / you're better than you think at...",
+    s6send:'send this forward ✦', s6skip:'skip for now',
+    s6toast:'Graf will cherish this ✨',
+    gpeatext:'Hi @channel — GPEA just levelled up ✦ we can now use AI agent for analytics and reporting! curious? find us in #ea-civis-user on Slack ✦',
+    s6bbtn:'continue →',
+    microResps:['Graf is printing this and putting it on the wall.','this one is going in the journal.'],
+    s7title:'Thank you for everything.',
+    s7body:'This has been the best team I have ever been part of.<br>Every meeting, every ticket, every late deadline —<br>I will carry all of it with me.<br><br>May your coffee always be hot,<br>your Mondays always be short,<br>and every project you touch turn into<br>something you\'re proud of.<br><br>And one small wish, just from me to you:<br>be a little kinder to yourself than yesterday.<br>You\'ve earned it.',
+    s7sig:'with all my love, Graf', s7btn:'one more thing →',
+    s8title:'find me here',
+    s8sub:"you're not losing Graf — she's just floating somewhere nearby",
+    s8hint:'✦ tap any card to copy or open', s8btn:'see what\'s next →',
+    emailCopied:'Email copied! 📮', waCopied:'WhatsApp copied! 💬', liOpened:'LinkedIn opened! 🔗',
+    s9title:'With your love, Graf is ready.',
+    s9body:'A basket full of your kindness.<br>A heart full of these memories.<br>New roads, new adventures, new bears to meet —<br><strong style="font-style:normal">the best is still ahead.</strong>',
+    s9close:'see you out there ✦', s9btn:'🌿close this window',
+    easterEgg:'psst — the passkey still works if you ever miss the forest 🌿',
+    closeMsg1:'Bye 🧸', closeMsg2:'you can close this tab now ❤️',
+    fallbackMsg:'Graf sends her warmest love to you. Every face in the forest is a gift.',
+  },
+  zh: {
+    exitBtn:'✕ 離開森林',
+    loadTxt:'進入森林中... 🌿',
+    loadTimeout:'去森林的路上有點塞車，請重新整理 🌿',
+    s1title:'Graf 的小森林',
+    s1sub:'身為數據人，資料安全是我們的首要任務 🔑 請輸入密碼來解鎖',
+    s1label:'通關密語？', s1ph:'在這裡輸入...',
+    s1err:'嗯，好像不對喔 — 去 Slack 問 Graf 吧！',
+    s1hint:'沒有密碼？→ 去 Slack 找 Graf 🐻', s1btn:'解鎖森林 →',
+    s2title:'歡迎來到 Graf 的小森林',
+    s2sub:'有三分鐘嗎？ 陪 Graf 待一下下',
+    s2label:'你叫什麼名字？', s2ph:'在這裡寫...',
+    s2btn:'進入小森林 →', s2btn2:'有點忙 — 待會再來 :)',
+    laterText:'沒關係！把這頁加入書籤，準備好再回來.',
+    laterSub:'Graf 會在這裡等你 ✦',
+    laterReturn:'其實我有三分鐘 :)',
+    nfNote:'Graf 把愛分享給森林裡的每一個人 🌲',
+    s3header:'一封小小的信，專屬於你唷 ✉',
+    s3sig:'— Graf 🥦 🐻',
+    sHint:'📸 截圖保存這封信！',
+    giftNote:'Graf 也留了這個給你 🌲',
+    s3btn:'繼續走進去 →',
+    s4title:'想回傳些什麼嗎？',
+    s4sub:'哪怕隨便幾個字，也能溫暖 Graf 的心',
+    s4yes:'好啊，我想說 💌', s4skip:'帶我去商店',
+    s4ph:'Hi Graf，我還記得那一天我發ticket給妳...',
+    s4send:'傳出去 ✦', s4toast:'傳給 Graf 了！💌',
+    s5title:'送 Graf 一份小廢物？',
+    s5sub:'這是個小廢物遊戲 呵呵，不用付錢、不用結帳、更沒有扣款失敗。選一些你想送給 Graf 的禮物，傳遞你的祝福吧',
+    s5sub2:'這些禮物完全是假的。Graf堅持嚴格的「財務透明」。您可以在上方查看即時「捐款記錄」，完全透明。（但我不會寄年度收據給你）',
+    s5send:'送給 Graf 🎁', s5skip:'下次再說',
+    nudge:'先選一個？🌿 直接跳過 ↗',
+    s5toast:'小廢物送出！Graf 會感受到你的愛的 ❤️',
+    gCnt:(n)=>`已有 ${n} 份`, othersPh:'你想送 Graf 什麼？',
+    gNames:['勇敢軟糖','溫豆漿','可愛小熊','綠色和平','幸運星','AI 茶','改變巧克力','韌性石','其他'],
+    gDescs:['每次面對新挑戰一定要來一顆','植物性、低碳排、依然暖心','特別需要抱抱的那種日子','因為地球也需要 Graf','折一顆，許個願','慢慢泡，保持好奇心','外甜內柔，隨時適應','堅不可摧，有點粗糙，卻默默美麗','寫下你想送給 Graf 的禮物！'],
+    s6title:'最後一件事？',
+    s6sub:'給 Graf 的最後一張 Asana ticket~ 什麼建議、要求、或任何回饋都歡迎。（發現 bug？回報一下 👀）',
+    s6ph:'嘿 Graf，我真心覺得你應該... / 我希望你帶走的一件事是... / 你比自己想的更擅長...',
+    s6send:'傳遞下去 ✦', s6skip:'下次再說',
+    s6toast:'Graf 會珍惜這些祝福的 ✨',
+    gpeatext:'無情工商一下 — GPEA data team又升級了 ✦ 我們現在可以用 AI agent做數據分析和報告！酷不酷？到 Slack 的 #ea-civis-user 找我們了解這個酷東西 ✦',
+    s6bbtn:'繼續 →',
+    microResps:['Graf 一定會把這個印出來貼在牆上。','這句話要寫進日記了。'],
+    s7title:'謝謝你的一切。',
+    s7body:'這是我待過最可愛的工作環境。每一次會議、每一張ticket、每一個壓線的deadline — 我都會帶著它們離開。<br><br>願你沒帶雨傘的時候永遠是晴天的，週一永遠短一點，假日長一點，每個你參與的專案都能讓你引以為傲。<br><br>謝謝你！',
+    s7sig:'Graf', s7btn:'還有一件事 →',
+    s8title:'你可以在這裡找到我',
+    s8sub:'Graf沒有失蹤 — 她只是在附近的某個地方流浪？',
+    s8hint:'✦ 點擊任何卡片即可複製或開啟', s8btn:'看看接下來是什麼 →',
+    emailCopied:'信箱已複製！📮', waCopied:'WhatsApp 已複製！💬', liOpened:'LinkedIn 已開啟！🔗',
+    s9title:'有你的祝福，Graf 準備好了。',
+    s9body:'一籃子你的善意。<br>一顆裝滿回憶的心。<br>新的道路、新的冒險、新的熊朋友 —<br><strong style="font-style:normal">更好的還在前方。</strong>',
+    s9close:'宇宙見 ✦', s9btn:'🌿關閉視窗',
+    easterEgg:'偷偷跟你說，如果你想念這奇妙的小森林，通關密語還有效喔',
+    closeMsg1:'再見 🧸', closeMsg2:'現在可以關閉這個標籤了 ❤️',
+    fallbackMsg:'很開心在GP認識你，謝謝你走進來這座小森林，願你往後的日子一切順利',
+  }
+};
 
 const THEMES = {
-  tea:    {bg:'linear-gradient(135deg,#f5e8d8,#ede0c8)',tc:'#5a3820',sc:'#8a5830',deco:'🍵',gift:'🍯'},
-  gelato: {bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#5a2048',sc:'#9a4070',deco:'🍦',gift:'🍦'},
-  ice:    {bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#5a2048',sc:'#9a4070',deco:'🍦',gift:'🍦'},
-  ufo:    {bg:'linear-gradient(135deg,#d8e8f8,#d0daf8)',tc:'#20305a',sc:'#405890',deco:'🛸',gift:'⭐'},
-  sci:    {bg:'linear-gradient(135deg,#d8e8f8,#d0daf8)',tc:'#20305a',sc:'#405890',deco:'🛸',gift:'⭐'},
-  suit:   {bg:'linear-gradient(135deg,#e8e4f8,#d8d4f0)',tc:'#2a2050',sc:'#5a50a0',deco:'👔',gift:'🌸'},
-  chart:  {bg:'linear-gradient(135deg,#e8e4f8,#d8d4f0)',tc:'#2a2050',sc:'#5a50a0',deco:'📊',gift:'🌸'},
-  africa: {bg:'linear-gradient(135deg,#f8e8c8,#f0d0a0)',tc:'#5a3010',sc:'#9a6020',deco:'🌍',gift:'🌺'},
+  tea:{bg:'linear-gradient(135deg,#f5e8d8,#ede0c8)',tc:'#5a3820',sc:'#8a5830',deco:'🍵',gift:'🍯'},
+  gelato:{bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#5a2048',sc:'#9a4070',deco:'🍦',gift:'🍦'},
+  ice:{bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#5a2048',sc:'#9a4070',deco:'🍦',gift:'🍦'},
+  ufo:{bg:'linear-gradient(135deg,#d8e8f8,#d0daf8)',tc:'#20305a',sc:'#405890',deco:'🛸',gift:'⭐'},
+  sci:{bg:'linear-gradient(135deg,#d8e8f8,#d0daf8)',tc:'#20305a',sc:'#405890',deco:'🛸',gift:'⭐'},
+  suit:{bg:'linear-gradient(135deg,#e8e4f8,#d8d4f0)',tc:'#2a2050',sc:'#5a50a0',deco:'📊',gift:'🌸'},
+  chart:{bg:'linear-gradient(135deg,#e8e4f8,#d8d4f0)',tc:'#2a2050',sc:'#5a50a0',deco:'📊',gift:'🌸'},
+  africa:{bg:'linear-gradient(135deg,#f8e8c8,#f0d0a0)',tc:'#5a3010',sc:'#9a6020',deco:'🌍',gift:'🌺'},
 };
-const FALLBACK={bg:'linear-gradient(135deg,#e8f4d8,#e0ecc8)',tc:'#3a5a20',sc:'#5a7a40',deco:'🌿',gift:'🌸',
-  message:"Graf sends her warmest love to you. Every face in the forest is a gift."};
+const FALLBACK={bg:'linear-gradient(135deg,#e8f4d8,#e0ecc8)',tc:'#3a5a20',sc:'#5a7a40',deco:'🌱',gift:'🌸'};
 
-const GROCERIES=[
-  {id:'brave gummy',     emoji:'🍬',name:'Brave Gummy',       desc:'pop one before every scary new thing'},
-  {id:'warm soy milk',   emoji:'🥛',name:'Warm Soy Milk',     desc:'plant-based, low-carbon, still cozy'},
-  {id:'lovely bear',     emoji:'🧸',name:'Lovely Bear',       desc:'for days that really need a hug'},
-  {id:'greenpeace love', emoji:'🌿',name:'Greenpeace Love',   desc:'because the planet needs Graf too'},
-  {id:'lucky star',      emoji:'⭐',name:'Lucky Star',        desc:'fold one and wish her well'},
-  {id:'ai tea',          emoji:'🍵',name:'AI Tea',            desc:'steep slowly, stay curious'},
-  {id:'change chocolate',emoji:'🍫',name:'Change Chocolate',  desc:'sweet outside, adapts on the inside'},
-  {id:'resilience rock', emoji:'🪨',name:'Resilience Rock',   desc:'unbreakable, a little rough, secretly beautiful'},
-];
+const GROCERY_IDS=['brave gummy','warm soy milk','lovely bear','greenpeace love','lucky star','ai tea','change chocolate','resilience rock','others'];
+const GROCERY_EMOJIS=['🍬','🥛','🧸','🌿','⭐','🍵','🍫','🪨','✏️'];
+const DOT_ICONS=['🌍','🔐','🌿','✉','💌','🧺','🎀','🌙','☁️','☀️'];
+const SCREENS=['s0','s1','s2','s3','s4','s5','s6','s6b','s7','s8','s9'];
 
-const MICRO_RESPS=[
-  "noted. and honestly — thank you for meaning it.",
-  "Graf is printing this and putting it on the wall.",
-  "this one is going in the journal.",
-  "keeping this one close. really.",
-];
+let lang='en', curIdx=0;
+let curPerson=null, colleagues=[], groceryCounts={}, selectedGrocery={};
+let pendingMsg='', pendingGift='', easterTimer=null;
 
-const DOT_ICONS=['🔐','🌿','✉','💌','🧺','🎀','🌟','🌙','☁️','☀️'];
-// screens: 0=passkey,1=welcome,2=card,3=reply,4=grocery,5=suggest,5b=gpea,6=kindwords,7=connect,8=finale
-const SCREEN_IDS=['s0','s1','s2','s3','s4','s5','s5b','s6','s7','s8'];
-const DOT_MAP=[0,1,2,3,4,5,5,6,7,8]; // dot index for each screen slot
-
-let curIdx=0; // index into SCREEN_IDS
-let curPerson=null,colleagues=[],groceryCounts={},selectedGrocery={};
-let pendingMsg='',pendingGift='',easterTimer=null;
-
+// ── Build progress dots ───────────────────────────────────────────────
 function buildDots(){
-  const dotContainers=['pd0','pd1','pd2','pd3','pd4','pd5','pd5b','pd6','pd7','pd8'];
-  const darkScreens=['pd6'];
-  const skyScreens=['pd7'];
-  dotContainers.forEach((pid,si)=>{
+  // dot index for each screen (0-9 mapping to DOT_ICONS)
+  const dotMap={pd0:0,pd1:1,pd2:2,pd3:3,pd4:4,pd5:5,pd6:6,pd6b:6,pd7:7,pd8:8,pd9:9};
+  Object.entries(dotMap).forEach(([pid,active])=>{
     const el=document.getElementById(pid);
     if(!el)return;
     el.innerHTML='';
-    for(let i=0;i<9;i++){
+    const dark=pid==='pd7';
+    const sky=pid==='pd8';
+    for(let i=0;i<10;i++){
       const d=document.createElement('div');
       let cls='pdot';
-      if(darkScreens.includes(pid))cls+=' pdot-dk';
-      else if(skyScreens.includes(pid))cls+=' pdot-cl';
-      if(i===DOT_MAP[si])cls+=' on';
+      if(dark)cls+=' pdot-dk';
+      else if(sky)cls+=' pdot-cl';
+      if(i===active)cls+=' on';
       d.className=cls;
       d.textContent=DOT_ICONS[i];
       el.appendChild(d);
@@ -639,35 +690,72 @@ function buildDots(){
   });
 }
 
-function goToId(id){
-  const cur=SCREEN_IDS[curIdx];
-  document.getElementById(cur).classList.remove('active');
+// ── Apply language to all UI text ─────────────────────────────────────
+function applyLang(){
+  const t=T[lang];
+  const set=(id,val,html=false)=>{const el=document.getElementById(id);if(el){if(html)el.innerHTML=val;else el.textContent=val;}};
+  const ph=(id,val)=>{const el=document.getElementById(id);if(el)el.placeholder=val;};
+  document.getElementById('exitBtn').textContent=t.exitBtn;
+  document.getElementById('loadTxt').textContent=t.loadTxt;
+  document.getElementById('loadTimeout').textContent=t.loadTimeout;
+  set('s1title',t.s1title);set('s1sub',t.s1sub);set('s1label',t.s1label);
+  ph('passInput',t.s1ph);set('passError',t.s1err);set('s1hint',t.s1hint);set('s1btn',t.s1btn);
+  set('s2title',t.s2title);set('s2sub',t.s2sub);set('s2label',t.s2label);
+  ph('nameInput',t.s2ph);set('s2btn',t.s2btn);set('s2btn2',t.s2btn2);
+  set('nfNote',t.nfNote);
+  const lt=document.getElementById('laterText');
+  if(lt)lt.innerHTML=t.laterText+'<br><span style="font-size:1rem;color:#9a8a60">'+t.laterSub+'</span>';
+  set('laterReturn',t.laterReturn);
+  set('s3header',t.s3header);set('cardSig',t.s3sig);set('sHint',t.sHint);
+  set('giftNote',t.giftNote);set('s3btn',t.s3btn);
+  set('s4title',t.s4title);set('s4sub',t.s4sub);
+  set('s4yes',t.s4yes);set('s4skip',t.s4skip);
+  ph('replyText',t.s4ph);set('s4send',t.s4send);
+  set('s5title',t.s5title);set('s5sub',t.s5sub);set('s5sub2',t.s5sub2);
+  set('s5send',t.s5send);set('s5skip',t.s5skip);
+  set('nudgeMsg',t.nudge);ph('othersInput',t.othersPh);
+  set('s6title',t.s6title);set('s6sub',t.s6sub);
+  ph('suggestText',t.s6ph);set('s6send',t.s6send);set('s6skip',t.s6skip);
+  set('gpeatext',t.gpeatext,true);set('s6bbtn',t.s6bbtn);
+  set('s7title',t.s7title);set('s7body',t.s7body,true);set('s7sig',t.s7sig);set('s7btn',t.s7btn);
+  set('s8title',t.s8title);set('s8sub',t.s8sub);set('s8hint',t.s8hint);set('s8btn',t.s8btn);
+  set('s9title',t.s9title);set('s9body',t.s9body,true);set('s9close',t.s9close);set('s9btn',t.s9btn);
+  set('easterEgg',t.easterEgg);
+  buildGroceryGrid();
+}
+
+// ── Navigation ────────────────────────────────────────────────────────
+function goTo(sid){
   const ov=document.getElementById('overlay');
   ov.classList.add('fade');
   setTimeout(()=>{
-    curIdx=SCREEN_IDS.indexOf(id);
-    document.getElementById(id).classList.add('active');
+    document.getElementById(SCREENS[curIdx]).classList.remove('active');
+    curIdx=SCREENS.indexOf(sid);
+    document.getElementById(sid).classList.add('active');
     ov.classList.remove('fade');
     window.scrollTo(0,0);
-    if(id==='s6')spawnFF();
-    if(id==='s7')spawnClouds();
-    if(id==='s8')startEasterEgg();
+    if(sid==='s7')spawnFF();
+    if(sid==='s8')spawnClouds();
+    if(sid==='s9')startEasterEgg();
   },450);
 }
-// convenience: go by screen number (0-8 maps to s0-s5,s5b,s6-s8)
-function goTo(n){
-  const map={0:'s0',1:'s1',2:'s2',3:'s3',4:'s4',5:'s5',6:'s6',7:'s7',8:'s8'};
-  goToId(map[n]);
+
+// ── Language selection (Screen 0) ─────────────────────────────────────
+function setLang(l){
+  lang=l;
+  applyLang();
+  document.getElementById('exitBtn').style.display='block';
+  goTo('s1');
 }
 
+// ── Passkey (Screen 1) ────────────────────────────────────────────────
 function checkPass(){
   const v=document.getElementById('passInput').value.trim().toLowerCase();
   if(v===PASSKEY){
     document.getElementById('passError').style.display='none';
-    goTo(1);
-    document.getElementById('exitBtn').style.display='block';
-    spawnLeaves();
-  }else{
+    spawnFlowers();
+    goTo('s2');
+  } else {
     document.getElementById('passError').style.display='block';
     document.getElementById('passInput').value='';
     document.getElementById('passInput').style.borderBottomColor='#c05060';
@@ -675,26 +763,24 @@ function checkPass(){
   }
 }
 
+// ── Welcome (Screen 2) ────────────────────────────────────────────────
 function enterForest(){
   const raw=document.getElementById('nameInput').value.trim();
-  if(!raw){document.getElementById('nameInput').placeholder='please tell me your name :)';return;}
-  // case-insensitive match on name
+  if(!raw){document.getElementById('nameInput').placeholder=lang==='en'?'please tell me your name :)':'請告訴我你的名字 :)';return;}
   const person=colleagues.find(c=>c.name&&c.name.toLowerCase()===raw.toLowerCase());
   if(!person){
     document.getElementById('nfNote').style.display='block';
-    curPerson={...FALLBACK,name:raw};
-    setTimeout(()=>{document.getElementById('nfNote').style.display='none';goTo(4);},1800);
+    curPerson={...FALLBACK,name:raw,msg:T[lang].fallbackMsg};
+    setTimeout(()=>{document.getElementById('nfNote').style.display='none';goTo('s5');},1800);
     return;
   }
-  // case-insensitive style keyword match
   const style=(person.style||'').toLowerCase();
   let theme=FALLBACK;
-  for(const[key,t]of Object.entries(THEMES)){if(style.includes(key)){theme=t;break;}}
+  for(const[key,th] of Object.entries(THEMES)){if(style.includes(key)){theme=th;break;}}
   curPerson={...person,...theme,msg:person.message};
   buildCard(curPerson);
-  goTo(2);
+  goTo('s3');
 }
-
 function comeBackLater(){
   document.getElementById('nameForm').style.display='none';
   document.getElementById('laterMsg').style.display='block';
@@ -704,9 +790,10 @@ function showNameForm(){
   document.getElementById('nameForm').style.display='flex';
 }
 
+// ── Message card (Screen 3) ───────────────────────────────────────────
 function buildCard(p){
   const card=document.getElementById('msgCard');
-  card.style.background=p.bg;card.style.color=p.tc;
+  card.style.background=p.bg; card.style.color=p.tc;
   document.getElementById('cardDeco').textContent=p.deco;
   document.getElementById('cardGreeting').textContent='Dear '+p.name+',';
   document.getElementById('cardGreeting').style.color=p.sc;
@@ -719,174 +806,201 @@ function buildCard(p){
   const type=()=>{if(i<msg.length){el.textContent+=msg[i++];setTimeout(type,speed);}else afterTyping(p);};
   setTimeout(type,600);
 }
-
 function afterTyping(p){
   const hint=document.getElementById('sHint');
   hint.classList.add('show');
   setTimeout(()=>hint.classList.remove('show'),5000);
-  const giftMap={'🍵':'🍯','🍦':'🍦','🛸':'⭐','📊':'🌸','🌍':'🌺','🌿':'🌸'};
-  document.getElementById('giftIcon').textContent=giftMap[p.deco]||'🌸';
+  const gMap={'🍵':'🍯','🍦':'🍦','🛸':'⭐','📊':'🌸','🌍':'🌺','🌿':'🌸'};
+  document.getElementById('giftIcon').textContent=gMap[p.deco]||'🌸';
   document.getElementById('microGift').style.display='flex';
-  setTimeout(()=>{document.getElementById('continueBtn').style.display='block';},3000);
+  setTimeout(()=>{document.getElementById('s3btn').style.display='block';},3000);
 }
 
+// ── Send back (Screen 4) ──────────────────────────────────────────────
 function showMsgBox(){
-  document.getElementById('s3btns').style.display='none';
+  document.getElementById('s4btns').style.display='none';
   document.getElementById('msgBox').style.display='block';
 }
 function sendMsg(){
   pendingMsg=document.getElementById('replyText').value.trim();
-  showToast('flying to Graf! 💌');
-  setTimeout(()=>goTo(4),1200);
+  showToast(T[lang].s4toast);
+  setTimeout(()=>goTo('s5'),1200);
 }
 
+// ── Virtual Gift Shop (Screen 5) ──────────────────────────────────────
 function buildGroceryGrid(){
   const grid=document.getElementById('groceryGrid');
   if(!grid)return;
   grid.innerHTML='';
-  GROCERIES.forEach(g=>{
-    const cnt=groceryCounts[g.id]||0;
+  const t=T[lang];
+  GROCERY_IDS.forEach((id,idx)=>{
+    const cnt=groceryCounts[id]||0;
     const d=document.createElement('div');
-    d.className='g-item';d.id='gi-'+g.id;
-    d.innerHTML=`<span class="g-emoji">${g.emoji}</span><div class="g-name">${g.name}</div><div class="g-desc">${g.desc}</div><div class="g-cnt" id="cnt-${g.id}">${cnt>0?cnt+' given 🎁':''}</div><div class="g-badge">✓</div>`;
-    d.onclick=()=>toggleGrocery(g.id,d,g.emoji);
+    d.className='g-item'; d.id='gi-'+id;
+    d.innerHTML=`<span class="g-emoji">${GROCERY_EMOJIS[idx]}</span><div class="g-name">${t.gNames[idx]}</div><div class="g-desc">${t.gDescs[idx]}</div><div class="g-cnt" id="cnt-${id}">${cnt>0?t.gCnt(cnt):''}</div><div class="g-badge">✓</div>`;
+    d.onclick=()=>toggleGrocery(id,d,GROCERY_EMOJIS[idx]);
     grid.appendChild(d);
   });
 }
-
-function getBasketPos(){
-  const b=document.getElementById('basket');
-  const r=b.getBoundingClientRect();
-  return{x:r.left+r.width/2,y:r.top+r.height/2};
-}
+function getBasketPos(){const b=document.getElementById('basket');const r=b.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2};}
 function updateSeedling(){
   const n=Object.keys(selectedGrocery).length;
   const el=document.getElementById('seedling');
-  if(n===0)el.textContent='🌱';
-  else if(n<=2)el.textContent='🌿';
-  else if(n<=4)el.textContent='🌳';
+  if(n<=1)el.textContent='🌱';
+  else if(n<=3)el.textContent='🌿';
+  else if(n<=5)el.textContent='🌳';
   else el.textContent='🌲🌲';
 }
 function toggleGrocery(id,el,emoji){
-  if(selectedGrocery[id]){delete selectedGrocery[id];el.classList.remove('picked');}
-  else{
-    selectedGrocery[id]=true;el.classList.add('picked');
-    const ir=el.getBoundingClientRect();const bp=getBasketPos();
-    const fly=document.createElement('div');
-    fly.className='fly-emoji';fly.textContent=emoji;
-    fly.style.cssText=`left:${ir.left+ir.width/2-14}px;top:${ir.top+ir.height/2-14}px`;
-    document.body.appendChild(fly);
-    fly.animate([
-      {transform:'translate(0,0) scale(1)',opacity:1},
-      {transform:`translate(${bp.x-(ir.left+ir.width/2)}px,${bp.y-(ir.top+ir.height/2)}px) scale(0.3)`,opacity:0}
-    ],{duration:580,easing:'cubic-bezier(0.25,0.46,0.45,0.94)',fill:'forwards'}).onfinish=()=>{
-      fly.remove();
-      const basket=document.getElementById('basket');
-      basket.classList.remove('cart-bounce');void basket.offsetWidth;basket.classList.add('cart-bounce');
-    };
+  if(selectedGrocery[id]){
+    delete selectedGrocery[id]; el.classList.remove('picked');
+    if(id==='others')document.getElementById('othersInput').style.display='none';
+  } else {
+    selectedGrocery[id]=true; el.classList.add('picked');
+    if(id==='others'){
+      const inp=document.getElementById('othersInput');
+      inp.style.display='block'; inp.focus();
+    } else {
+      const ir=el.getBoundingClientRect(); const bp=getBasketPos();
+      const fly=document.createElement('div'); fly.className='fly-emoji'; fly.textContent=emoji;
+      fly.style.cssText=`left:${ir.left+ir.width/2-14}px;top:${ir.top+ir.height/2-14}px`;
+      document.body.appendChild(fly);
+      fly.animate([
+        {transform:'translate(0,0) scale(1)',opacity:1},
+        {transform:`translate(${bp.x-(ir.left+ir.width/2)}px,${bp.y-(ir.top+ir.height/2)}px) scale(0.3)`,opacity:0}
+      ],{duration:580,easing:'cubic-bezier(0.25,0.46,0.45,0.94)',fill:'forwards'}).onfinish=()=>{
+        fly.remove();
+        const basket=document.getElementById('basket');
+        basket.classList.remove('cart-bounce'); void basket.offsetWidth; basket.classList.add('cart-bounce');
+      };
+    }
   }
   const n=Object.keys(selectedGrocery).length;
   const badge=document.getElementById('cartBadge');
-  badge.textContent=n;badge.style.display=n>0?'flex':'none';
+  badge.textContent=n; badge.style.display=n>0?'flex':'none';
   updateSeedling();
 }
-
 function sendGrocery(skipAnyway){
   const picked=Object.keys(selectedGrocery);
   if(picked.length===0&&!skipAnyway){
-    document.getElementById('nudgeMsg').style.display='block';
+    const nm=document.getElementById('nudgeMsg');
+    nm.style.display='block';
     document.getElementById('basket').classList.add('cart-bounce');
-    setTimeout(()=>document.getElementById('nudgeMsg').style.display='none',3000);
+    setTimeout(()=>nm.style.display='none',3000);
     return;
   }
-  pendingGift=picked.join(', ');
-  if(picked.length>0){picked.forEach(id=>apiPost({type:'grocery',item:id}));showToast('packed for Graf!');}
-  setTimeout(()=>goTo(5),picked.length>0?1200:0);
-  if(picked.length===0)goTo(5);
+  const othersText=document.getElementById('othersInput').value.trim();
+  pendingGift=picked.map(id=>id==='others'&&othersText?`others:${othersText}`:id).join(', ');
+  if(picked.length>0){
+    picked.forEach(id=>{
+      const item=id==='others'&&othersText?`others:${othersText}`:id;
+      apiPost({type:'grocery',item});
+    });
+    showToast(T[lang].s5toast);
+    setTimeout(()=>goTo('s6'),1200);
+  } else {
+    goTo('s6');
+  }
 }
 
+// ── One last thing (Screen 6) ─────────────────────────────────────────
 function sendSuggestion(){
   const sug=document.getElementById('suggestText').value.trim();
   flushToSheet(sug);
   if(sug){
-    const resp=MICRO_RESPS[Math.floor(Math.random()*MICRO_RESPS.length)];
+    const resps=T[lang].microResps;
+    const resp=resps[Math.floor(Math.random()*resps.length)];
     const el=document.getElementById('microResp');
-    document.getElementById('s5btns').style.display='none';
-    el.textContent=resp;el.classList.add('show');
-    setTimeout(()=>goToId('s5b'),3200);
-  }else{
-    goToId('s5b');
+    document.getElementById('s6btns').style.display='none';
+    el.textContent=resp; el.classList.add('show');
+    setTimeout(()=>goTo('s6b'),3200);
+  } else {
+    showToast(T[lang].s6toast);
+    goTo('s6b');
   }
 }
 function flushAndGo(){
   flushToSheet('');
-  goToId('s5b');
+  goTo('s6b');
 }
 function flushToSheet(sug){
   apiPost({type:'message',name:curPerson?.name||'friend',message:pendingMsg,suggestion:sug,gift:pendingGift});
-  pendingMsg='';pendingGift='';
+  pendingMsg=''; pendingGift='';
 }
 
+// ── Screen 7: Fireflies ───────────────────────────────────────────────
 function spawnFF(){
-  const c=document.getElementById('ffWrap');c.innerHTML='';
+  const c=document.getElementById('ffWrap'); c.innerHTML='';
   for(let i=0;i<22;i++){
-    const f=document.createElement('div');f.className='ff';
+    const f=document.createElement('div'); f.className='ff';
     const sz=3+Math.random()*4;
     f.style.cssText=`left:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-duration:${4+Math.random()*5}s;animation-delay:${Math.random()*4}s;box-shadow:0 0 6px #c8f080`;
     c.appendChild(f);
   }
 }
+
+// ── Screen 8: Clouds ──────────────────────────────────────────────────
 function spawnClouds(){
-  const c=document.getElementById('cloudBg');c.innerHTML='';
+  const c=document.getElementById('cloudBg'); c.innerHTML='';
   [{w:120,h:55,top:'12%',dur:30},{w:90,h:42,top:'32%',dur:24},{w:150,h:65,top:'54%',dur:38},{w:80,h:38,top:'70%',dur:21}].forEach(cfg=>{
-    const cl=document.createElement('div');cl.className='cloud-shape';
+    const cl=document.createElement('div'); cl.className='cloud-shape';
     cl.style.cssText=`width:${cfg.w}px;height:${cfg.h}px;top:${cfg.top};animation-duration:${cfg.dur}s;animation-delay:-${Math.random()*cfg.dur}s`;
     c.appendChild(cl);
   });
 }
-function copyTxt(t,msg){navigator.clipboard.writeText(t).then(()=>showToast(msg)).catch(()=>showToast(t));}
-function openLink(url){window.open(url,'_blank');}
+function copyTxt(text,toastKey){
+  navigator.clipboard.writeText(text).then(()=>showToast(T[lang][toastKey])).catch(()=>showToast(text));
+}
+function openLink(url){window.open(url,'_blank');showToast(T[lang].liOpened);}
+
+// ── Screen 9: Easter egg + close ─────────────────────────────────────
 function startEasterEgg(){
   clearTimeout(easterTimer);
   easterTimer=setTimeout(()=>document.getElementById('easterEgg').classList.add('show'),8000);
 }
 function closeWindow(){
-  showToast('see you out there 🌿');
+  showToast(T[lang].s9close);
   setTimeout(()=>{
     try{window.close();}catch(e){}
     const ov=document.getElementById('overlay');
-    ov.style.transition='background 1.2s';ov.style.background='rgba(212,240,228,1)';
+    ov.style.transition='background 1.2s'; ov.style.background='rgba(212,240,228,1)';
     setTimeout(()=>{
-      document.body.innerHTML='<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;background:linear-gradient(180deg,#d8f0e8,#c4e8da)"><p style="font-family:Gaegu,cursive;font-size:2.2rem;color:#2a6a50;text-align:center">see you out there ✦</p><p style="font-family:Lora,serif;font-style:italic;color:#3a8060;font-size:0.95rem">you can close this tab now 🌿</p></div>';
+      document.body.innerHTML=`<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;background:linear-gradient(180deg,#d8f0e8,#c4e8da)"><p style="font-family:Gaegu,cursive;font-size:2.2rem;color:#2a6a50;text-align:center">${T[lang].closeMsg1}</p><p style="font-family:Lora,serif;color:#3a8060;font-size:0.95rem">${T[lang].closeMsg2}</p></div>`;
     },1000);
   },800);
 }
 
+// ── Falling flowers ───────────────────────────────────────────────────
+function spawnFlowers(){
+  const c=document.getElementById('flowersWrap');
+  if(!c)return;
+  const flowers=['🌼','🌹','🌸','✿','🌺'];
+  for(let i=0;i<18;i++){
+    const l=document.createElement('div'); l.className='flower';
+    l.textContent=flowers[Math.floor(Math.random()*flowers.length)];
+    l.style.cssText=`left:${Math.random()*100}%;animation-duration:${7+Math.random()*8}s;animation-delay:${Math.random()*6}s;font-size:${0.9+Math.random()*0.7}rem`;
+    c.appendChild(l);
+  }
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────
+function showToast(msg){
+  const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+// ── API ───────────────────────────────────────────────────────────────
 async function apiPost(payload){
   try{await fetch(APPS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}catch(e){}
 }
 async function apiGet(type){
   try{const r=await fetch(APPS_URL+'?type='+type);return await r.json();}catch(e){return null;}
 }
-function spawnLeaves(){
-  const c=document.getElementById('leavesWrap');
-  ['🍃','🌸','🌼','✦','·','🌿'].forEach((_,idx)=>{
-    for(let i=0;i<3;i++){
-      const l=document.createElement('div');l.className='leaf';
-      l.textContent=['🍃','🌸','🌼','✦','·','🌿'][Math.floor(Math.random()*6)];
-      l.style.cssText=`left:${Math.random()*100}%;animation-duration:${7+Math.random()*8}s;animation-delay:${Math.random()*6}s;font-size:${0.8+Math.random()*0.8}rem`;
-      c.appendChild(l);
-    }
-  });
-}
-function showToast(msg){
-  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2500);
-}
 
+// ── Init ──────────────────────────────────────────────────────────────
 async function init(){
   buildDots();
-  const timeout=setTimeout(()=>document.getElementById('loadTimeout').style.display='block',6000);
+  const timeout=setTimeout(()=>{document.getElementById('loadTimeout').style.display='block';},6000);
   const[cols,grocs]=await Promise.all([apiGet('getColleagues'),apiGet('getGrocery')]);
   clearTimeout(timeout);
   if(cols&&Array.isArray(cols))colleagues=cols.filter(c=>c.name);
