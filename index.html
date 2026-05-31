@@ -212,52 +212,102 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
 
 <!-- ════ S2: Welcome ════ -->
 <div id="s2" class="screen">
-  <div id="flowersWrap" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1"></div>
-  <div class="content">
-    <!-- THREE BEARS SVG -->
-    <div class="fade-in" style="width:100%;max-width:560px;margin-bottom:0.3rem">
-      <svg viewBox="0 0 680 340" width="100%" xmlns="http://www.w3.org/2000/svg">
-        <rect width="680" height="340" fill="#d8ecc0"/>
-        <ellipse cx="340" cy="318" rx="330" ry="36" fill="#b0d488"/>
-        <!-- trees -->
-        <ellipse cx="52" cy="162" rx="38" ry="74" fill="#a8cc80" opacity="0.75"/>
-        <ellipse cx="52" cy="162" rx="25" ry="57" fill="#90bc68" opacity="0.85"/>
-        <rect x="47" y="228" width="10" height="60" rx="3" fill="#8a6a40" opacity="0.5"/>
-        <ellipse cx="628" cy="156" rx="40" ry="76" fill="#a8cc80" opacity="0.75"/>
-        <ellipse cx="628" cy="156" rx="27" ry="58" fill="#90bc68" opacity="0.85"/>
-        <rect x="623" y="224" width="10" height="62" rx="3" fill="#8a6a40" opacity="0.5"/>
-        <ellipse cx="158" cy="182" rx="28" ry="54" fill="#b8d880" opacity="0.55"/>
-        <rect x="154" y="228" width="8" height="46" rx="3" fill="#8a6a40" opacity="0.42"/>
-        <ellipse cx="522" cy="178" rx="30" ry="56" fill="#b8d880" opacity="0.55"/>
-        <rect x="518" y="226" width="8" height="48" rx="3" fill="#8a6a40" opacity="0.42"/>
-        <!-- ground flowers -->
-        <circle cx="195" cy="310" r="5" fill="#f8d040"/><circle cx="195" cy="310" r="2.5" fill="#9a6020"/>
-        <circle cx="255" cy="316" r="4" fill="#f4a0b8"/>
-        <circle cx="340" cy="318" r="4" fill="#f8f060"/><circle cx="340" cy="318" r="2" fill="#a8a020"/>
-        <circle cx="430" cy="315" r="4" fill="#f4a0b8"/>
-        <circle cx="488" cy="311" r="5" fill="#f8d040"/><circle cx="488" cy="311" r="2.5" fill="#9a6020"/>
-        <!-- BLACK BEAR -->
-        <g transform="translate(148,58)">
-          <ellipse cx="0" cy="158" rx="44" ry="58" fill="#1e1810"/>
-          <ellipse cx="0" cy="163" rx="27" ry="37" fill="#2e2820"/>
-          <polygon points="0,118 -20,168 20,168" fill="#f0ede4" opacity="0.95"/>
-          <circle cx="0" cy="90" r="28" fill="#1e1810"/>
-          <circle cx="-19" cy="66" r="12" fill="#1e1810"/><circle cx="-19" cy="66" r="7" fill="#2e2820"/>
-          <circle cx="19" cy="66" r="12" fill="#1e1810"/><circle cx="19" cy="66" r="7" fill="#2e2820"/>
-          <ellipse cx="0" cy="100" rx="11" ry="8.5" fill="#3a3028"/>
-          <circle cx="-9" cy="84" r="4" fill="#080604"/><circle cx="-7.5" cy="82.5" r="1.5" fill="white"/>
-          <circle cx="9" cy="84" r="4" fill="#080604"/><circle cx="10.5" cy="82.5" r="1.5" fill="white"/>
-          <ellipse cx="0" cy="98" rx="3" ry="2.2" fill="#080604"/>
-          <path d="M-4 104 Q0 109 4 104" stroke="#2a2018" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <ellipse cx="-13" cy="100" rx="6" ry="3.5" fill="#d08878" opacity="0.26"/>
-          <ellipse cx="13" cy="100" rx="6" ry="3.5" fill="#d08878" opacity="0.26"/>
-          <ellipse cx="-34" cy="120" rx="10" ry="26" fill="#1e1810" transform="rotate(-40,-34,120)"/>
-          <ellipse cx="44" cy="160" rx="24" ry="10" fill="#1e1810" transform="rotate(10,44,160)"/>
-          <ellipse cx="-16" cy="205" rx="15" ry="20" fill="#1e1810" transform="rotate(-4,-16,205)"/>
-          <ellipse cx="16" cy="206" rx="15" ry="19" fill="#1e1810" transform="rotate(4,16,206)"/>
-          <ellipse cx="-16" cy="222" rx="17" ry="8" fill="#141010"/>
-          <ellipse cx="16" cy="223" rx="17" ry="8" fill="#141010"/>
-        </g>
+  <div id="flowersWrap" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1">
+  <svg width="100%" height="100%" style="position:absolute;inset:0" xmlns="http://www.w3.org/2000/svg">
+    <!-- flower 1 -->
+    <g style="animation:floatA 14s ease-in-out infinite;opacity:0.18" transform-origin="120px 180px">
+      <circle cx="120" cy="180" r="5" fill="#f4a0b8"/>
+      <circle cx="113" cy="174" r="4" fill="#f4a0b8"/>
+      <circle cx="127" cy="174" r="4" fill="#f4a0b8"/>
+      <circle cx="113" cy="186" r="4" fill="#f4a0b8"/>
+      <circle cx="127" cy="186" r="4" fill="#f4a0b8"/>
+      <circle cx="120" cy="180" r="3" fill="#fff8f0"/>
+    </g>
+    <!-- flower 2 -->
+    <g style="animation:floatB 18s ease-in-out infinite;opacity:0.15" transform-origin="320px 120px">
+      <circle cx="320" cy="120" r="4" fill="#f8d040"/>
+      <circle cx="314" cy="115" r="3.5" fill="#f8d040"/>
+      <circle cx="326" cy="115" r="3.5" fill="#f8d040"/>
+      <circle cx="314" cy="125" r="3.5" fill="#f8d040"/>
+      <circle cx="326" cy="125" r="3.5" fill="#f8d040"/>
+      <circle cx="320" cy="120" r="2.5" fill="#fff8e0"/>
+    </g>
+    <!-- flower 3 -->
+    <g style="animation:floatC 22s ease-in-out infinite;opacity:0.14" transform-origin="500px 280px">
+      <circle cx="500" cy="280" r="5" fill="#f0a0b8"/>
+      <circle cx="493" cy="274" r="4" fill="#f0a0b8"/>
+      <circle cx="507" cy="274" r="4" fill="#f0a0b8"/>
+      <circle cx="493" cy="286" r="4" fill="#f0a0b8"/>
+      <circle cx="507" cy="286" r="4" fill="#f0a0b8"/>
+      <circle cx="500" cy="280" r="3" fill="#fff8f0"/>
+    </g>
+    <!-- flower 4 -->
+    <g style="animation:floatA 16s ease-in-out infinite 3s;opacity:0.13" transform-origin="80px 320px">
+      <circle cx="80" cy="320" r="4" fill="#c8e0a0"/>
+      <circle cx="74" cy="315" r="3.5" fill="#c8e0a0"/>
+      <circle cx="86" cy="315" r="3.5" fill="#c8e0a0"/>
+      <circle cx="74" cy="325" r="3.5" fill="#c8e0a0"/>
+      <circle cx="86" cy="325" r="3.5" fill="#c8e0a0"/>
+      <circle cx="80" cy="320" r="2.5" fill="#f0f8e8"/>
+    </g>
+    <!-- flower 5 -->
+    <g style="animation:floatB 20s ease-in-out infinite 5s;opacity:0.16" transform-origin="420px 80px">
+      <circle cx="420" cy="80" r="5" fill="#f8c0d0"/>
+      <circle cx="413" cy="74" r="4" fill="#f8c0d0"/>
+      <circle cx="427" cy="74" r="4" fill="#f8c0d0"/>
+      <circle cx="413" cy="86" r="4" fill="#f8c0d0"/>
+      <circle cx="427" cy="86" r="4" fill="#f8c0d0"/>
+      <circle cx="420" cy="80" r="3" fill="#fff0f4"/>
+    </g>
+    <!-- flower 6 -->
+    <g style="animation:floatC 25s ease-in-out infinite 8s;opacity:0.12" transform-origin="240px 360px">
+      <circle cx="240" cy="360" r="4" fill="#f8d040"/>
+      <circle cx="234" cy="355" r="3.5" fill="#f8d040"/>
+      <circle cx="246" cy="355" r="3.5" fill="#f8d040"/>
+      <circle cx="234" cy="365" r="3.5" fill="#f8d040"/>
+      <circle cx="246" cy="365" r="3.5" fill="#f8d040"/>
+      <circle cx="240" cy="360" r="2.5" fill="#fffde8"/>
+    </g>
+    <!-- flower 7 -->
+    <g style="animation:floatA 19s ease-in-out infinite 2s;opacity:0.14" transform-origin="600px 220px">
+      <circle cx="600" cy="220" r="5" fill="#f0b8d0"/>
+      <circle cx="593" cy="214" r="4" fill="#f0b8d0"/>
+      <circle cx="607" cy="214" r="4" fill="#f0b8d0"/>
+      <circle cx="593" cy="226" r="4" fill="#f0b8d0"/>
+      <circle cx="607" cy="226" r="4" fill="#f0b8d0"/>
+      <circle cx="600" cy="220" r="3" fill="#fff4f8"/>
+    </g>
+    <!-- flower 8 -->
+    <g style="animation:floatB 23s ease-in-out infinite 6s;opacity:0.13" transform-origin="160px 60px">
+      <circle cx="160" cy="60" r="4" fill="#b8d8f0"/>
+      <circle cx="154" cy="55" r="3.5" fill="#b8d8f0"/>
+      <circle cx="166" cy="55" r="3.5" fill="#b8d8f0"/>
+      <circle cx="154" cy="65" r="3.5" fill="#b8d8f0"/>
+      <circle cx="166" cy="65" r="3.5" fill="#b8d8f0"/>
+      <circle cx="160" cy="60" r="2.5" fill="#f0f8ff"/>
+    </g>
+  </svg>
+</div>
+<style>
+@keyframes floatA {
+  0%,100%{transform:translate(0,0) rotate(0deg)}
+  25%{transform:translate(18px,-22px) rotate(8deg)}
+  50%{transform:translate(-12px,16px) rotate(-5deg)}
+  75%{transform:translate(20px,10px) rotate(6deg)}
+}
+@keyframes floatB {
+  0%,100%{transform:translate(0,0) rotate(0deg)}
+  30%{transform:translate(-20px,14px) rotate(-9deg)}
+  60%{transform:translate(16px,-18px) rotate(7deg)}
+  80%{transform:translate(-8px,20px) rotate(-4deg)}
+}
+@keyframes floatC {
+  0%,100%{transform:translate(0,0) rotate(0deg)}
+  20%{transform:translate(14px,20px) rotate(5deg)}
+  55%{transform:translate(-18px,-12px) rotate(-8deg)}
+  80%{transform:translate(10px,16px) rotate(4deg)}
+}
+</style>
         <!-- POLAR BEAR -->
         <g transform="translate(340,44)">
           <ellipse cx="0" cy="172" rx="54" ry="68" fill="#f2ede5"/>
@@ -411,6 +461,7 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
     <div class="gpea-tip fade-up" style="animation-delay:0.3s">
       <p id="gpeatext">Hi @channel — <strong>GPEA just levelled up ✦</strong> <br>You can now use AI agent for analytics and reporting! <br>curious? find us in <strong>#ea-civis-user</strong> on Slack</p>
     </div>
+    <p class="fade-up" style="font-family:'Gaegu',cursive;font-size:0.82rem;color:#9a70c0;margin-top:0.6rem;animation-delay:0.55s;text-align:center;letter-spacing:0.03em" id="s6btag">-- EA exclusive --</p>
     <button class="btn btn-purple fade-up" id="s6bbtn" onclick="goTo('s7')" style="animation-delay:0.7s;margin-top:1.2rem">continue →</button>
     <div class="progress-dots" id="pd6b"></div>
   </div>
@@ -465,6 +516,35 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
 
 <!-- ════ S9: Graf's Ready ════ -->
 <div id="s9" class="screen">
+<div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1">
+  <div style="position:absolute;width:28px;height:28px;border-radius:50%;background:rgba(255,160,180,0.18);animation:bounce1 6s ease-in-out infinite;left:8%;top:20%"></div>
+  <div style="position:absolute;width:18px;height:18px;border-radius:50%;background:rgba(160,220,180,0.16);animation:bounce2 8s ease-in-out infinite 1s;left:22%;top:60%"></div>
+  <div style="position:absolute;width:34px;height:34px;border-radius:50%;background:rgba(180,210,255,0.15);animation:bounce3 7s ease-in-out infinite 2s;left:55%;top:15%"></div>
+  <div style="position:absolute;width:22px;height:22px;border-radius:50%;background:rgba(255,220,140,0.18);animation:bounce1 9s ease-in-out infinite 0.5s;left:72%;top:55%"></div>
+  <div style="position:absolute;width:16px;height:16px;border-radius:50%;background:rgba(220,170,255,0.17);animation:bounce2 6.5s ease-in-out infinite 3s;left:40%;top:70%"></div>
+  <div style="position:absolute;width:26px;height:26px;border-radius:50%;background:rgba(255,190,160,0.15);animation:bounce3 10s ease-in-out infinite 1.5s;left:85%;top:30%"></div>
+  <div style="position:absolute;width:20px;height:20px;border-radius:50%;background:rgba(160,240,220,0.16);animation:bounce1 7.5s ease-in-out infinite 4s;left:15%;top:80%"></div>
+  <div style="position:absolute;width:30px;height:30px;border-radius:50%;background:rgba(255,200,200,0.14);animation:bounce2 11s ease-in-out infinite 2.5s;left:65%;top:80%"></div>
+  <div style="position:absolute;width:14px;height:14px;border-radius:50%;background:rgba(200,220,255,0.2);animation:bounce3 5.5s ease-in-out infinite 0.8s;left:35%;top:30%"></div>
+  <div style="position:absolute;width:24px;height:24px;border-radius:50%;background:rgba(255,230,160,0.15);animation:bounce1 8.5s ease-in-out infinite 3.5s;left:90%;top:70%"></div>
+</div>
+<style>
+@keyframes bounce1 {
+  0%,100%{transform:translateY(0) scale(1)}
+  40%{transform:translateY(-32px) scale(1.06)}
+  70%{transform:translateY(-14px) scale(0.97)}
+}
+@keyframes bounce2 {
+  0%,100%{transform:translateY(0) scale(1)}
+  35%{transform:translateY(-24px) scale(1.04)}
+  65%{transform:translateY(-8px) scale(0.98)}
+}
+@keyframes bounce3 {
+  0%,100%{transform:translateY(0) scale(1)}
+  45%{transform:translateY(-40px) scale(1.08)}
+  75%{transform:translateY(-18px) scale(0.96)}
+}
+</style>
   <div class="content">
     <!-- Polar bear illustration -->
     <div class="fade-in" style="width:100%;max-width:460px;margin-bottom:0.4rem">
@@ -716,7 +796,7 @@ function applyLang(){
   set('nudgeMsg',t.nudge);ph('othersInput',t.othersPh);
   set('s6title',t.s6title);set('s6sub',t.s6sub);
   ph('suggestText',t.s6ph);set('s6send',t.s6send);set('s6skip',t.s6skip);
-  set('gpeatext',t.gpeatext,true);set('s6bbtn',t.s6bbtn);
+  set('gpeatext',t.gpeatext,true);set('s6bbtn',t.s6bbtn);set('s6btag', lang==='zh' ? '-- 只在GPEA獨家販售中 --' : '-- GPEA exclusive --');
   set('s7title',t.s7title);set('s7body',t.s7body,true);set('s7sig',t.s7sig);set('s7btn',t.s7btn);
   set('s8title',t.s8title);set('s8sub',t.s8sub);set('s8hint',t.s8hint);set('s8btn',t.s8btn);
   set('s9title',t.s9title);set('s9body',t.s9body,true);set('s9close',t.s9close);set('s9btn',t.s9btn);
