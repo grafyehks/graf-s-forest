@@ -698,15 +698,15 @@ const T = {
 };
 
 const THEMES = {
-  tea:{bg:'linear-gradient(135deg,#f5e8d8,#ede0c8)',tc:'#5a3820',sc:'#8a5830',deco:'🍵',gift:'🍯'},
-  gelato:{bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#5a2048',sc:'#9a4070',deco:'🍦',gift:'🍦'},
-  ice:{bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#5a2048',sc:'#9a4070',deco:'🍦',gift:'🍦'},
-  ufo:{bg:'linear-gradient(135deg,#d8e8f8,#d0daf8)',tc:'#20305a',sc:'#405890',deco:'🛸',gift:'⭐'},
-  sci:{bg:'linear-gradient(135deg,#d8e8f8,#d0daf8)',tc:'#20305a',sc:'#405890',deco:'🛸',gift:'⭐'},
-  suit:{bg:'linear-gradient(135deg,#e8e4f8,#d8d4f0)',tc:'#2a2050',sc:'#5a50a0',deco:'📊',gift:'🌸'},
-  chart:{bg:'linear-gradient(135deg,#e8e4f8,#d8d4f0)',tc:'#2a2050',sc:'#5a50a0',deco:'📊',gift:'🌸'},
-  africa:{bg:'linear-gradient(135deg,#f8e8c8,#f0d0a0)',tc:'#5a3010',sc:'#9a6020',deco:'🌍',gift:'🌺'},
+  gelato:{bg:'linear-gradient(135deg,#f5d8e8,#edd8f0)',tc:'#6a6a6a',sc:'#909090',deco:'🍦',gift:'🍓'},
+  donut:{bg:'linear-gradient(135deg,#f5d8d0,#f0c8b8)',tc:'#8b1a1a',sc:'#c0440a',deco:'🍩',gift:'🍊'},
+  dog:{bg:'linear-gradient(135deg,#d8e8f8,#c8d8f0)',tc:'#1a3a6a',sc:'#2a5a9a',deco:'🐶',gift:'🍌'},
+  dove:{bg:'linear-gradient(135deg,#d0f0ee,#b8e8e4)',tc:'#2a6a68',sc:'#3a8a88',deco:'🕊️',gift:'🍏'},
+  honey:{bg:'linear-gradient(135deg,#fff0b0,#ffe880)',tc:'#8a6000',sc:'#b08000',deco:'🍯',gift:'🍒'},
+  rose:{bg:'linear-gradient(135deg,#fde8ee,#f8d0dc)',tc:'#8a2040',sc:'#c04060',deco:'🌹',gift:'🍇'},
+  ufo:{bg:'linear-gradient(135deg,#d0f0d8,#b8e8c0)',tc:'#1a5a2a',sc:'#2a8a3a',deco:'🛸',gift:'🫐'},
 };
+const FALLBACK={bg:'linear-gradient(135deg,#e8f4d8,#e0ecc8)',tc:'#3a5a20',sc:'#5a7a40',deco:'🌱',gift:'🌸'};
 const FALLBACK={bg:'linear-gradient(135deg,#e8f4d8,#e0ecc8)',tc:'#3a5a20',sc:'#5a7a40',deco:'🌱',gift:'🌸'};
 
 const GROCERY_IDS=['brave gummy','warm soy milk','lovely bear','greenpeace love','lucky star','ai tea','change chocolate','resilience rock','others'];
@@ -864,7 +864,7 @@ function afterTyping(p){
   const hint=document.getElementById('sHint');
   hint.classList.add('show');
   setTimeout(()=>hint.classList.remove('show'),7000);
-  const gMap={'🍵':'🍯','🍦':'🍦','🛸':'⭐','📊':'🌸','🌍':'🌺','🌿':'🌸'};
+  const gMap={'🍦':'🍓','🍩':'🍊','🐶':'🍌','🕊️':'🍏','🍯':'🍒','🌹':'🍇','🛸':'🫐','🌱':'🌸'};
   document.getElementById('giftIcon').textContent=gMap[p.deco]||'🌸';
   document.getElementById('microGift').style.display='flex';
   setTimeout(()=>{document.getElementById('s3btn').style.display='block';},5000);
