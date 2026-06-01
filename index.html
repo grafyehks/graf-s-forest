@@ -573,7 +573,7 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
 </div>
 
 <script>
-const APPS_URL = 'https://script.google.com/macros/s/AKfycbyFvsIWvQibSNJNyppfc1wE31yctY2j75HSIDpfip60f-DJ6ml6wn8bI3fTBoqHqlM/exec';
+const APPS_URL = 'https://script.google.com/macros/s/AKfycbzP6ILbBaPCuW4B0WhTuXB3_JQ5eKNqG6zg7CXY62rU5WBgtRFG6MnuoxIkFddeZY-L/exec';
 const PASSKEY  = 'higpea';
 
 const T = {
@@ -714,6 +714,7 @@ let lang='en', curIdx=0;
 let passUnlocked=false;
 let curPerson=null, colleagues=[], groceryCounts={}, selectedGrocery={};
 let pendingMsg='', pendingGift='', easterTimer=null;
+let sessionId=Math.random().toString(36).slice(2,10);
 
 // ── Build progress dots ───────────────────────────────────────────────
 const DOT_SCREENS=['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9']; // screen per dot index
@@ -869,6 +870,7 @@ function afterTyping(p){
   document.getElementById('giftIcon').textContent=gMap[p.deco]||'🌸';
   document.getElementById('microGift').style.display='flex';
   setTimeout(()=>{document.getElementById('s3btn').style.display='block';},1000);
+  apiPost({type:'sessionStart',sessionId,name:curPerson?.name||'',lang});
 }
 
 // ── Send back (Screen 4) ──────────────────────────────────────────────
@@ -878,6 +880,7 @@ function showMsgBox(){
 }
 function sendMsg(){
   pendingMsg=document.getElementById('replyText').value.trim();
+  apiPost({type:'updateSession',sessionId,field:'message',value:pendingMsg});
   showToast(T[lang].s4toast);
   setTimeout(()=>goTo('s5'),3200);
 }
@@ -979,7 +982,8 @@ function flushAndGo(){
   goTo('s6b');
 }
 function flushToSheet(sug){
-  apiPost({type:'message',name:curPerson?.name||'friend',message:pendingMsg,suggestion:sug,gift:pendingGift,lang:lang});
+  apiPost({type:'updateSession',sessionId,field:'suggestion',value:sug});
+  apiPost({type:'updateSession',sessionId,field:'gift',value:pendingGift});
   pendingMsg=''; pendingGift='';
 }
 
