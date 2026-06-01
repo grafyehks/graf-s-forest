@@ -571,7 +571,7 @@ textarea.suggest-box{border-color:#c8b0e0;color:#3a2040}.suggest-box::placeholde
     <button class="btn btn-ghost fade-up" id="s9btn" onclick="closeWindow()" style="border-color:#5a9070;color:#3a7050;margin-top:0.8rem;animation-delay:1.1s">close this window</button>
     <div class="progress-dots" id="pd9"></div>
   </div>
-  <div class="easter-egg" id="easterEgg">psst — the passkey still works if you ever miss the forest 🌿</div>
+  <div class="easter-egg" id="easterEgg">psst — the passkey still works <br>if you ever miss the forest 🌿</div>
 </div>
 
 <script>
@@ -620,7 +620,7 @@ const T = {
     s6ph:"Hey Graf, I genuinely think you should... / one thing I hope you carry is... / you're better than you think at...",
     s6send:'send this forward ✦', s6skip:'skip for now',
     s6toast:'Graf will cherish this ✨',
-    gpeatext:'Hi @channel — GPEA just levelled up ✦ we can now use AI agent for analytics and reporting! curious? find us in #ea-civis-user on Slack ✦',
+    gpeatext:'Hi @channel — GPEA just levelled up ✦ <br>we can now use AI agent for analytics and reporting! <br>curious? find us in #ea-civis-user on Slack',
     s6bbtn:'continue →',
     microResps:['Graf is printing this and putting it on the wall.','this one is going in the journal.'],
     s7title:'Thank you for everything.',
@@ -691,7 +691,7 @@ const T = {
     s9title:'有你的祝福，Graf 準備好了。',
     s9body:'一籃子你的祝福。<br>一顆裝滿回憶的心。<br>新的旅程、新的冒險、新的熊朋友 —<br><strong style="font-style:normal">更好的還在前方。</strong>',
     s9close:'宇宙見 ✦', s9btn:'關閉視窗',
-    easterEgg:'偷偷跟你說，如果你想念這奇妙的小森林，通關密語還有效喔',
+    easterEgg:'偷偷跟你說—<br>如果你想念這奇妙的小森林<br>通關密語還有效喔',
     closeMsg1:'再見 🧸', closeMsg2:'現在可以關閉這個頁面了 ❤️',
     fallbackMsg:'很開心在GP認識你，謝謝你走進來這座小森林，願你往後的日子一切順利',
   }
@@ -978,7 +978,7 @@ function flushAndGo(){
   goTo('s6b');
 }
 function flushToSheet(sug){
-  apiPost({type:'message',name:curPerson?.name||'friend',message:pendingMsg,suggestion:sug,gift:pendingGift});
+  apiPost({type:'message',name:curPerson?.name||'friend',message:pendingMsg,suggestion:sug,gift:pendingGift,lang:lang});
   pendingMsg=''; pendingGift='';
 }
 
