@@ -715,6 +715,7 @@ const DOT_ICONS=['🌍','🔐','🌿','✉','💌','🧺','🎀','🌙','☁️'
 const SCREENS=['s0','s1','s2','s3','s4','s5','s6','s6b','s7','s8','s9'];
 
 let lang='en', curIdx=0;
+let passUnlocked=false;
 let curPerson=null, colleagues=[], groceryCounts={}, selectedGrocery={};
 let pendingMsg='', pendingGift='', easterTimer=null;
 
@@ -737,8 +738,12 @@ function buildDots(){
       d.className=cls;
       d.textContent=DOT_ICONS[i];
       d.title=DOT_SCREENS[i];
-      d.style.cursor='pointer';
-      d.addEventListener('click',()=>goTo(DOT_SCREENS[i]));
+      d.style.cursor= (i<=1||passUnlocked) ? 'pointer' : 'default';
+      d.style.opacity= (i<=1||passUnlocked) ? '1' : '0.35';
+      d.addEventListener('click',()=>{
+        if(i>1 && !passUnlocked) return; // locked — silent no-op
+        goTo(DOT_SCREENS[i]);
+      });
       el.appendChild(d);
     }
   });
@@ -807,7 +812,9 @@ function checkPass(){
   const v=document.getElementById('passInput').value.trim().toLowerCase();
   if(v===PASSKEY){
     document.getElementById('passError').style.display='none';
+    passUnlocked=true;
     spawnFlowers();
+    buildDots();
     goTo('s2');
   } else {
     document.getElementById('passError').style.display='block';
@@ -867,7 +874,7 @@ function afterTyping(p){
   const gMap={'🍦':'🍓','🍩':'🍊','🐶':'🍌','🕊️':'🍏','🍯':'🍒','🌹':'🍇','🛸':'🫐','🌱':'🌸'};
   document.getElementById('giftIcon').textContent=gMap[p.deco]||'🌸';
   document.getElementById('microGift').style.display='flex';
-  setTimeout(()=>{document.getElementById('s3btn').style.display='block';},5000);
+  setTimeout(()=>{document.getElementById('s3btn').style.display='block';},1000);
 }
 
 // ── Send back (Screen 4) ──────────────────────────────────────────────
