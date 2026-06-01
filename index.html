@@ -827,6 +827,7 @@ function enterForest(){
   if(!person){
     document.getElementById('nfNote').style.display='block';
     curPerson={...FALLBACK,name:raw,msg:T[lang].fallbackMsg};
+    apiPost({type:'sessionStart',sessionId,name:raw,lang});
     setTimeout(()=>{document.getElementById('nfNote').style.display='none';goTo('s5');},5000);
     return;
   }
