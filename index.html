@@ -827,7 +827,6 @@ function enterForest(){
   if(!person){
     document.getElementById('nfNote').style.display='block';
     curPerson={...FALLBACK,name:raw,msg:T[lang].fallbackMsg};
-    apiPost({type:'sessionStart',sessionId,name:raw,lang});
     setTimeout(()=>{document.getElementById('nfNote').style.display='none';goTo('s5');},5000);
     return;
   }
@@ -949,10 +948,11 @@ function sendGrocery(skipAnyway){
     return;
   }
   const othersText=document.getElementById('othersInput').value.trim();
-  pendingGift=picked.map(id=>id==='others'&&othersText?`others:${othersText}`:id).join(', ');
+  const othersName=curPerson?.name||'';
+  pendingGift=picked.map(id=>id==='others'&&othersText?`others:${othersText}(${othersName})`:id).join(', ');
   if(picked.length>0){
     picked.forEach(id=>{
-      const item=id==='others'&&othersText?`others:${othersText}`:id;
+      const item=id==='others'&&othersText?`others:${othersText}(${othersName})`:id;
       apiPost({type:'grocery',item});
     });
     showToast(T[lang].s5toast);
