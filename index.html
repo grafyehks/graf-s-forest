@@ -825,10 +825,14 @@ function enterForest(){
   if(!raw){document.getElementById('nameInput').placeholder=lang==='en'?'please tell me your name :)':'請告訴我你的名字 :)';return;}
   const person=colleagues.find(c=>c.name&&c.name.toLowerCase()===raw.toLowerCase());
   if(!person){
-    document.getElementById('nfNote').style.display='block';
-    curPerson={...FALLBACK,name:raw,msg:T[lang].fallbackMsg};
-    apiPost({type:'sessionStart',sessionId,name:raw,lang});
-    setTimeout(()=>{document.getElementById('nfNote').style.display='none';goTo('s5');},5000);
+    // Name not found — close window
+    const notFoundMsg = lang==='zh'
+      ? '找不到你的名字 🌿\n請確認名字是否正確，或聯繫 Graf'
+      : 'Hmm, your name wasn\'t found 🌿\nPlease check your name or contact Graf';
+    alert(notFoundMsg);
+    try{window.close();}catch(e){}
+    document.body.innerHTML=`<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;background:linear-gradient(180deg,#f5efe6,#ede8dc);font-family:Gaegu,cursive;text-align:center;padding:2rem"><p style="font-size:1.8rem;color:#5a3a20">${lang==='zh'?'找不到你的名字 🌿':'Your name wasn\'t found 🌿'}</p><p style="font-family:Lora,serif;font-style:italic;font-size:1rem;color:#9a7a60">${lang==='zh'?'請確認名字是否正確，或聯繫 Graf':'Please check your name or contact Graf directly'}</p></div>`;
+    return;
     return;
   }
   const style=(person.style||'').toLowerCase();
